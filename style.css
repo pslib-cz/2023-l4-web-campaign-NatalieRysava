@@ -127,8 +127,8 @@ header::before {
     width: 100%;
     height: 100vh;
     background-image: url();
-    background-size: ;
-    background-repeat: ;
+    background-size: auto;
+    background-repeat: auto;
     margin: 0 auto;
     top: 0;
     left: 0;
@@ -152,7 +152,6 @@ header::before {
 
 .section--pozadi .button{
     color: var(--basic-white);
-    border: 2px solid var(--basic-white);
 }
 
 .section {
@@ -217,7 +216,7 @@ figure {
 .button {
     text-decoration: none;
     color: black;
-    border: 2px solid black;
+    border: 2px solid var(--basic-white);
     border-radius: 2rem;
     padding: 1rem 2rem;
     margin-top: 2rem;
@@ -232,6 +231,8 @@ div:has(.button) {
     background: none;
     color: black;
     mix-blend-mode: screen;
+    border: none;
+    border: 2px solid var(--basic-white);
 }
   
 .section--pozadi .button:hover:before {
