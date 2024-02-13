@@ -226,3 +226,22 @@ figure {
 div:has(.button) {
     margin-block: 4rem 2rem;
 }
+
+.section--pozadi .button:hover {
+    position: relative;
+    background: none;
+    color: black;
+    mix-blend-mode: screen;
+}
+  
+.section--pozadi .button:hover:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-radius: 2em;
+    content: '';
+    mix-blend-mode: color-burn;
+  }
