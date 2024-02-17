@@ -148,10 +148,12 @@ header::before {
 .section--pozadi {
     position: relative;
     color: var(--basic-white);
+    transition: .25s ease;
 }
 
 .section--pozadi .button{
     color: var(--basic-white);
+    transition: .25s ease;
 }
 
 .section {
@@ -220,19 +222,22 @@ figure {
     border-radius: 2rem;
     padding: 1rem 2rem;
     margin-top: 2rem;
+    transition:.25s ease;
 }
 
-div:has(.button) {
+div:has(>.button) {
     margin-block: 4rem 2rem;
 }
 
 .section--pozadi .button:hover {
     position: relative;
-    background: none;
+    background: var(--basic-white);
     color: black;
     mix-blend-mode: screen;
     border: none;
     border: 2px solid var(--basic-white);
+    transition: .5s;
+
 }
   
 .section--pozadi .button:hover:before {
@@ -245,4 +250,61 @@ div:has(.button) {
     border-radius: 2em;
     content: '';
     mix-blend-mode: color-burn;
+    transition: .5s;
   }
+
+
+  .section--beige .box--text:hover img {
+    transform: scale(1.25);
+  }
+
+  .section--beige .box--text img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.section--beige .box--text {
+    position: relative;
+    display: inline-block;
+}
+
+.section--beige .box--text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.section--beige .box--text:hover:before {
+    background-color: var(--sec-sky-blue);
+    opacity: .5;
+}
+
+.box--text {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    padding: 1em;
+    color: var(--basic-black);
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+
+
+
+  .section--beige figure {
+    overflow: hidden;
+  }
+
+ 
