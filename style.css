@@ -151,7 +151,7 @@ header::before {
     transition: .25s ease;
 }
 
-.section--pozadi .button{
+.button{
     color: var(--basic-white);
     transition: .25s ease;
 }
@@ -222,7 +222,7 @@ figure {
     border-radius: 2rem;
     padding: 1rem 2rem;
     margin-top: 2rem;
-    transition:.25s ease;
+    transition: .25s ease;
 }
 
 div:has(>.button) {
@@ -236,7 +236,7 @@ div:has(>.button) {
     mix-blend-mode: screen;
     border: none;
     border: 2px solid var(--basic-white);
-    transition: .5s;
+    transition: .25s ease;
 
 }
   
@@ -250,7 +250,7 @@ div:has(>.button) {
     border-radius: 2em;
     content: '';
     mix-blend-mode: color-burn;
-    transition: .5s;
+    transition: .25s ease;
   }
 
 
@@ -340,5 +340,8 @@ figcaption small {
         max-width: 290px;
     }
 }*/
-
- 
+/*
+.button-box {
+    transform: none !important;
+}
+*/
