@@ -62,8 +62,13 @@ body {
     margin: 0;
 }
 
+.header--video {
+    height: 100vh;
+}
+
 .header {
     margin: 0 auto;
+    height: 15rem;
 }
 
 h2, h3, h4, h5, h6 {
@@ -101,10 +106,6 @@ h1 {
         opacity: 1;
         transform: translate(-50%, 0);
     }
-}
-
-.header {
-    height: 100vh;
 }
 
 body::before {
@@ -171,6 +172,7 @@ img {
     height: 100%;
     margin: 0;
     padding: 0;
+    object-fit: cover;
 }
 
 p {
@@ -345,3 +347,16 @@ figcaption small {
     transform: none !important;
 }
 */
+
+article {
+    display: flex;
+    align-items: center;
+}
+
+article div {
+    text-align: left;
+}
+
+.article__figure img {
+    width: 25vw;
+}
