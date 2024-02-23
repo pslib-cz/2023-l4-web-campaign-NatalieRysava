@@ -62,13 +62,13 @@ body {
     margin: 0;
 }
 
-.header--video {
-    height: 100vh;
-}
-
 .header {
     margin: 0 auto;
     height: 15rem;
+}
+
+.header--video {
+    height: 100vh;
 }
 
 h2, h3, h4, h5, h6 {
@@ -88,6 +88,10 @@ h1 {
     color: #ffffff;
     font-size: 3rem;
     animation: 2s ease-out anim forwards;
+}
+
+h2 {
+    margin-block: 1.5rem;
 }
 
 .heading--hidden {
@@ -350,13 +354,31 @@ figcaption small {
 
 article {
     display: flex;
-    align-items: center;
+    align-items: start;
+    gap: 4rem;
 }
 
 article div {
     text-align: left;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
-.article__figure img {
+.article__figure {
     width: 25vw;
+    aspect-ratio: 1;
 }
+
+article h2 {
+    margin-top: 0;
+}
+
+.section--offer {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding-inline: 8rem;
+}
+
+
+
