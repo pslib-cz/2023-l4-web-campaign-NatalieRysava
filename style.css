@@ -422,13 +422,12 @@ figcaption small {
 
 article div {
     text-align: left;
-    flex-grow: 1;
-    flex-basis: 0;
 }
 
 .article__figure {
     width: 25vw;
     aspect-ratio: 1;
+    flex-shrink: 0
 }
 
 article h2 {
