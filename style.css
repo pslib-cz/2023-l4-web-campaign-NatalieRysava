@@ -26,6 +26,7 @@
 html {
     font-family: 'OpenSans', sans-serif;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 .nav__menu, .nav__menu div {
     display: flex;
@@ -71,12 +72,16 @@ body {
     height: 100vh;
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6, .heading--h2 {
     font-family: 'NotoSerif', serif;
     font-weight: 400;
 }
 
-h1 {
+h2, .heading--h2 {
+    font-size: 2rem;
+}
+
+.heading--h1 {
     font-family: 'WilliamCostinavel', sans-serif;
     font-weight: 400;
     position: absolute;
@@ -90,8 +95,12 @@ h1 {
     animation: 2s ease-out anim forwards;
 }
 
-h2 {
+h2, .heading--h2 {
     margin-block: 1.5rem;
+}
+
+.heading--h2 {
+    color: var(--basic-black);
 }
 
 .heading--hidden {
@@ -99,6 +108,7 @@ h2 {
     width: 320px;
     display: block;
     font-size: 0;
+    margin: 0;
 }
 
 @keyframes anim {
@@ -121,7 +131,7 @@ h2 {
 }*/
 
 body::after {
-    content: url(Ellipse1.svg);
+    content: url(ellipse.svg);
     position: absolute;
     top: 0;
     right: 0;
@@ -133,7 +143,7 @@ body::before {
     content: "";
     width: 100%;
     height: 100%;
-    background-image: url(Rectangle1.png);
+    background-image: url(gradients.webp);
     background-repeat: no-repeat;
     margin: 0 auto;
     top: 0;
@@ -372,7 +382,7 @@ figcaption small {
 }
 */
 
-article {
+.section--offer article {
     display: flex;
     align-items: start;
     gap: 4rem;
@@ -397,11 +407,12 @@ article h2 {
     display: flex;
     flex-direction: column;
     gap: 6rem;
-    padding-inline: 8rem;
+    padding: 8rem;
 }
 
 .section--introduction {
-    height: calc(100vh - 18rem - 4rem); 
+    height: calc(100vh - 18rem - 6rem);
+    position: relative;
 }
 
 /*.fade {
@@ -414,5 +425,89 @@ article h2 {
     to {opacity: 1}
 }*/
 
+.text-box__list {
+    padding-left: calc(1rem + 7.2px / 4);
+}
+
+li::marker {
+    color: var(--prim-gold);
+  }
 
 
+
+
+
+
+.scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: scroll .8s 3s ease-in forwards;
+}
+
+.scroll img {
+    width: 40px;
+    height: auto;
+    animation: scroll2 2s 3s ease-in-out infinite;
+}
+
+@keyframes scroll {
+    from {
+        bottom: 30%;
+        opacity: 0;
+    }
+    50% {
+        opacity: .2;
+    }
+    to {
+        bottom: 15%;
+        opacity: 1;
+    }
+}
+
+@keyframes scroll2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.text--decorative {
+    margin-block: 0 3rem;
+}
+
+.heading--margin-bottom {
+     margin-bottom: .5rem;
+}
+
+.text-box p {
+    margin-inline: 0;
+}
+
+.section--interest__text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7.5rem;
+}
+
+.article-box {
+    display: flex;
+}
+
+.section--interest__text-box h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    max-width: 420px;
+}
+
+.section--interest__text-box .button-box {
+    margin-top: 2rem;
+}
