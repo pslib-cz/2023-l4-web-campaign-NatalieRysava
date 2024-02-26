@@ -574,3 +574,8 @@ li::marker {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+
+.box--text:has(.button:hover) figcaption, .box--text:has(.button:hover) .button-box {
+    mix-blend-mode: screen;
+  }
