@@ -265,7 +265,7 @@ figure {
 
 .section--logo {
     display: grid;
-    grid-gap: 3rem 2rem;
+    grid-gap: 1rem 2rem;
     grid-template-columns: repeat(5, 1fr);
     padding: 1rem;
 }
