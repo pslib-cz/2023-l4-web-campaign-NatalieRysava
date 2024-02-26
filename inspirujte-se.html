@@ -5,9 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">    
     <link rel="stylesheet" href="aos.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides1");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 2500);
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides2");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 2500);
+            }
+        });
+    </script>
     <title>Preciosa Trophies</title>
 </head>
-<body>
+<body class="body--gradients">
     <header class="header">
         <nav class="nav">
             <menu class="nav__menu menu">
@@ -26,14 +64,17 @@
         <a href="index.html"><h1><span class="heading--hidden">Preciosa</span> Trophies</h1></a>
     </header>
     <main>
-        <section class="section">
-            <h2>A co umíme?</h2>
-            <p>V Preciose navazujeme na tradici českého sklářství a kombinujeme tradiční výrobní postupy s moderními technologiemi. Pokud hledáte originální výrobky, které zaujmou svou kvalitou a designem, jste na správném místě. Připojte se k nám a objednejte si výrobek z českého křišťálu Preciosa na míru. Prohlédněte si naše široké portfolio realizovaných zakázkových projektů.</p>
+        <section class="section section--introduction">
+            <h2 data-aos="fade-zoom-in" data-aos-duration="2000">A co umíme?</h2>
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="250">V Preciose navazujeme na tradici českého sklářství a kombinujeme tradiční výrobní postupy s moderními technologiemi. Pokud hledáte originální výrobky, které zaujmou svou kvalitou a designem, jste na správném místě. Připojte se k nám a objednejte si výrobek z českého křišťálu Preciosa na míru. Prohlédněte si naše široké portfolio realizovaných zakázkových projektů.</p>
         </section>
         <section class="section section--offer">
-            <article>
+            <article data-aos="fade-right" data-aos-duration="2000">
                 <figure class="article__figure">
-                    <a href=""><img src="img/darky-1.jpg" alt=""></a>
+                    <img class="mySlides1 fade" src="img/trofeje-1.webp" alt="">
+                    <img class="mySlides1 fade" src="img/darky-1.webp" alt="">
+                    <img class="mySlides1 fade" src="img/trofeje-1.webp" alt="">
+                    <img class="mySlides1 fade" src="img/darky-1.webp" alt="">
                 </figure>
                 <div>
                     <h2>Trofeje a ocenění</h2>
@@ -45,9 +86,12 @@
                     </ul>
                 </div>
             </article>
-            <article>
+            <article data-aos="fade-right" data-aos-duration="2000">
                 <figure class="article__figure">
-                    <a href=""><img src="img/darky-1.jpg" alt=""></a>
+                    <img class="mySlides2 fade" src="img/darky-1.webp" alt="">
+                    <img class="mySlides2 fade" src="img/trofeje-1.webp" alt="">
+                    <img class="mySlides2 fade" src="img/darky-1.webp" alt="">
+                    <img class="mySlides2 fade" src="img/trofeje-1.webp" alt="">
                 </figure>
                 <div>
                     <h2>Dárky</h2>
