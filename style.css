@@ -92,7 +92,7 @@ h2, .heading--h2 {
     text-transform: lowercase;
     color: #ffffff;
     font-size: 3rem;
-    animation: 2s ease-out anim forwards;
+    animation: 2s ease-out heading forwards;
     display: flex;
     flex-direction: column;
 }
@@ -116,7 +116,7 @@ h2, .heading--h2 {
     margin: 0;
 }
 
-@keyframes anim {
+@keyframes heading {
     from {
         opacity: 0;
         transform: translate(-50%, -100px);
