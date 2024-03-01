@@ -93,6 +93,8 @@ h2, .heading--h2 {
     color: #ffffff;
     font-size: 3rem;
     animation: 2s ease-out anim forwards;
+    display: flex;
+    flex-direction: column;
 }
 
 h2, .heading--h2 {
@@ -173,7 +175,7 @@ footer::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
 }
 
 
@@ -569,7 +571,6 @@ li::marker {
 
 
 .section--inspiration {
-    height: calc((100vw - 9rem) / 3);
     display: grid;
     grid-gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
