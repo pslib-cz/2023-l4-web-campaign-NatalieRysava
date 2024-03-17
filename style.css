@@ -244,6 +244,9 @@ p {
 
 figure {
     margin: 0;
+}
+
+.figure--square {
     aspect-ratio: 1;
 }
 
@@ -745,4 +748,13 @@ li::marker {
             flex-direction: row;
             justify-content: center;
         }
+    }
+
+    .section--contact figure {
+        height: calc(100vh - 288px - 44px - 21.6px - 4rem);
+    }
+
+    .section--contact img {
+        object-fit: contain;
+        mix-blend-mode: darken;
     }
