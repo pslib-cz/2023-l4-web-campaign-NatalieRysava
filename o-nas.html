@@ -46,7 +46,127 @@
                 <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="1250">Tým, který pro vás připraví dokonalou trofej...</p>
             <figure>
                 <img src="img/spolecna-fotografie-atelier.webp" alt="">
+                <figcaption>
+                    <div>
+                        <h3>Stáňa</h3>
+                        <p>Designerka</p>
+                    </div>
+                    <div>
+                        <h3>Kristina</h3>
+                        <p>Projektová manažerka</p>
+                    </div>
+                    <div>
+                        <h3>Jitka</h3>
+                        <p>Designerka</p>
+                    </div>
+                    <div>
+                        <h3>Tereza</h3>
+                        <p>Vedoucí oddělení speciálních projektů</p>
+                    </div>
+                </figcaption>
             </figure>
+        </section>
+        <section class="section section--pozadi section--form">
+            <video autoplay muted loop class="video-background">
+                <source src="pozadi.mp4"
+                type="video/mp4">
+            </video>
+            <div>
+                <form
+                  id="contact-form"
+                  class="contact-form"
+                  method="post"
+                  action-xhr="https://www.preciosa-trophies.com/ajax/contact.php"
+                  target="_top"
+                  on="submit-success:contact-form.clear"
+                >
+                  <div class="container">
+                    <div class="col-12">
+                      <label for="contact_name" class="hide">Vaše jméno *</label>
+                      <input
+                        id="contact_name"
+                        name="name"
+                        type="text"
+                        placeholder="Vaše jméno *"
+                        required
+                      />
+                    </div>
+                    <div class="col-hr-6 col-mr-6 col-lr-12">
+                        <label for="contact_phone" class="hide"
+                          >Telefonní číslo</label
+                        >
+                        <input
+                          id="contact_phone"
+                          name="phone"
+                          type="tel"
+                          placeholder="Telefonní číslo"
+                        />
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-hr-6 col-mr-6 col-lr-12">
+                      <label for="contact_email" class="hide"
+                        >E-mailová adresa *</label
+                      >
+                      <input
+                        id="contact_email"
+                        name="email"
+                        type="email"
+                        placeholder="E-mailová adresa *"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <label for="contact_message" class="hide">Text zprávy</label>
+                      <textarea id="contact_message" name="message"></textarea>
+                    </div>
+                    <div class="col-12 padding-bottom">
+                      <input
+                        type="checkbox"
+                        id="gdprconfirm"
+                        name="gdprconfirm"
+                        value="gdprconfirm"
+                        required
+                      />
+                      <label for="gdprconfirm"
+                        >Souhlasím se zpracováním osobních údajů za účelem realizace
+                        obchodní příležitosti. *</label
+                      ><br />
+                      <input
+                        type="checkbox"
+                        id="newsletter2"
+                        name="newsletter2"
+                        value="newsletter2"
+                      />
+                      <label for="newsletter2"
+                        >Chci být informován o dalších novinkách od společnosti
+                        Preciosa.</label
+                      >
+                    </div>
+                    <div class="col-12 text-center padding-bottom">
+                      <amp-recaptcha-input
+                        layout="nodisplay"
+                        name="recaptcha_token"
+                        data-sitekey="6LeGJhAiAAAAAKyTZlDrjPAoba3vwc9aiXw405m3"
+                        data-action="contact"
+                      ></amp-recaptcha-input>
+                      <button type="submit">Odeslat zprávu</button>
+                    </div>
+                    <div class="col-12 text-center">
+                      <div submit-success>
+                        <template type="amp-mustache"
+                          >Zpráva byla úspěšně odeslána.</template
+                        >
+                      </div>
+                      <div submit-error>
+                        <template type="amp-mustache"></template>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
