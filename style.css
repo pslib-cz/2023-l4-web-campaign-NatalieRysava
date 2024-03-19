@@ -72,9 +72,17 @@ body {
     height: 100vh;
 }
 
-h2, h3, h4, h5, h6, .heading--h2 {
+h2, h3, h4, h5, h6, .heading--h2, .heading--h3 {
     font-family: 'NotoSerif', serif;
     font-weight: 400;
+}
+
+h3, .heading--h3 {
+    font-size: 1.5rem;
+}
+
+.figure__box p {
+    margin: 0;
 }
 
 h2, .heading--h2 {
@@ -751,11 +759,17 @@ li::marker {
     }
 
     .section--contact figure {
+        position: relative;
         height: calc(75vh);
+        width: max-content;
+        margin: 0 auto;
     }
 
     .section--contact img {
-        object-fit: contain;
+        mix-blend-mode: darken;
+        height: 100%;
+        width: auto;
+        margin: 0 auto;
         mix-blend-mode: darken;
     }
 
@@ -813,4 +827,36 @@ li::marker {
     form input[type="checkbox"] {
         width: auto;
         margin: 0 .5rem 0 0;
+    }
+
+    .box--left-down {
+        position: absolute;
+        left: -4rem;
+        top: 15rem;
+        text-align: right;
+    }
+
+    .box--left-up {
+        position: absolute;
+        left: 1rem;
+        top: 7rem;
+        text-align: right;
+    }
+
+    .box--right-down {
+        position: absolute;
+        right: -2rem;
+        top: 15rem;
+        text-align: right;
+    }
+
+    .box--right-up {
+        position: absolute;
+        right: 1rem;
+        top: 7rem;
+        text-align: left;
+    }
+
+    .figure__box {
+        max-width: 100px;
     }
