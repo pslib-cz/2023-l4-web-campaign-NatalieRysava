@@ -47,34 +47,60 @@
             </figure>
             <div class="section--trophy__text-box text-box">
                 <div>
-                    <h1 class="heading--h2">Inženýrská akademie ČR</h1>
-                    <small class="subheading">trofej za vítězný projekt</small>
+                    <div>
+                        <h1 class="heading--h2">Inženýrská akademie ČR</h1>
+                        <small class="subheading">trofej za vítězný projekt</small>
+                    </div>
+                        <p class="text-box__text">Propojení tradiční sklářské výroby
+                            s vědou a technikou. To je spolupráce
+                            společnosti Preciosa a Inženýrské
+                            akademie ČR, která každoročně
+                            oceňuje vynikající technická
+                            díla a významný přínos k rozvoji
+                            inženýrského výzkumu v České
+                            republice.</p>
+                        <p class="text-box__text text-box__text--hidden">Ocenění bylo navrženo jako
+                            stylizace Resslova lodního šroubu,
+                            který má Inženýrská akademie ve svém
+                            logu. Tvar lehce evokuje křivku šroubu
+                            a zároveň tvarově připomíná siluetu
+                            poháru - tradiční trofeje. Ocenění je
+                            komponované do elegantního modrého
+                            tónu a do poslední části vyrobené
+                            z českého křišťálu.</p>
+                    <a class="rozbalovatko" href="#">Více</a>
+                    <p class="rozmer">Rozměr: 327 x 131 x 70 mm</p>
                 </div>
-                <p>Propojení tradiční sklářské výroby
-                    s vědou a technikou. To je spolupráce
-                    společnosti Preciosa a Inženýrské
-                    akademie ČR, která každoročně
-                    oceňuje vynikající technická
-                    díla a významný přínos k rozvoji
-                    inženýrského výzkumu v České
-                    republice. Ocenění bylo navrženo jako
-                    stylizace Resslova lodního šroubu,
-                    který má Inženýrská akademie ve svém
-                    logu. Tvar lehce evokuje křivku šroubu
-                    a zároveň tvarově připomíná siluetu
-                    poháru - tradiční trofeje. Ocenění je
-                    komponované do elegantního modrého
-                    tónu a do poslední části vyrobené
-                    z českého křišťálu.</p>
-                <a class="rozbalovatko" href="#">Více</a>
-                <p class="rozmer">Rozměr: 327 x 131 x 70 mm</p>
-                <figure class="text-box__picture-box">
-                    <img src="img/darky-1.webp" alt="">
-                    <img src="img/darky-1.webp" alt="">
-                    <img src="img/darky-1.webp" alt="">
-                </figure>
+                <div class="text-box__picture-box">
+                    <figure><img src="img/darky-1.webp" alt=""></figure>
+                    <figure><img src="img/darky-1.webp" alt=""></figure>
+                    <figure><img src="img/darky-1.webp" alt=""></figure>
+                </div>
             </div>
         </section>
     </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var toggleLink = document.querySelector('.rozbalovatko');
+                var textBoxPictureBox = document.querySelector('.text-box__picture-box');
+                var textBoxTexts = document.querySelectorAll('.text-box__text');
+                var textBoxTextHidden = document.querySelector('.text-box__text--hidden');;
+            
+                toggleLink.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
+                    textBoxTextHidden.classList.toggle('text-box__text--show'); // Show hidden text
+                    textBoxTexts.forEach(function(textBoxText) {
+                        textBoxText.classList.toggle('line-unset'); // Remove line clamp
+                    });
+                    // Toggle text of the link
+                    if (toggleLink.textContent === 'Více') {
+                        toggleLink.textContent = 'Méně';
+                    } else {
+                        toggleLink.textContent = 'Více';
+                    }
+                });
+            });
+            </script>
 </body>
 </html>

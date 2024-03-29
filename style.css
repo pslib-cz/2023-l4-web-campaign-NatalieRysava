@@ -882,19 +882,28 @@ li::marker {
 
     .section--trophy__text-box {
         width: 60%;
+        display: flex;
+        flex-direction: column;
     }
 
     .section--trophy .heading--h2 {
-        margin-bottom: .5rem;
+        margin-block: 0 .5rem;
     }
 
     .section--trophy .subheading {
         font-size: 1.125rem;
     }
 
-    .section--trophy__text-box > div {
+    .section--trophy__text-box div > div {
         margin-bottom: 2rem;
     }
+
+    .section--trophy__text-box > div:first-of-type {
+        min-height: 50%;
+        overflow: hidden;
+        flex-grow: 1;
+    }
+
 
     .rozmer {
         color: var(--prim-gold);
@@ -911,9 +920,36 @@ li::marker {
         gap: 1rem;
     }
 
-    .text-box__picture-box img {
-        width: 30%;
-        height: 30%;
-        object-fit: contain; /* nebo object-fit: cover; podle vašich preferencí */
+    .rozmer {
+        margin-bottom: 0;
     }
     
+
+    .text-box__text {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .section--trophy__text-box {
+        margin-bottom: 0;
+    }
+
+    
+    .text-box__picture-box.hidden {
+        display: none; /* Hide when .hidden class is added */
+    }
+
+    .text-box__text.line-unset {
+        -webkit-line-clamp: unset; /* Remove line clamp */
+      }
+
+    .text-box__text--hidden {
+        display: none;
+    }
+
+    .text-box__text--show {
+        display: block;
+    }
