@@ -23,22 +23,7 @@
     <title>Inspirujte se</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <menu class="nav__menu menu">
-                <div>
-                    <li class="menu__item"><a class="menu__link" href="index.html">Domů</a></li>
-                    <li class="menu__item"><a class="menu__link" href="inspirujte-se.html">Inspirujte se</a></li>
-                    <li class="menu__item"><a class="menu__link" href="o-nas.html">O nás</a></li>
-                </div>
-                <div>
-                    <li class="menu__item"><a class="menu__link" href="image-book.pdf">Image Book</a></li>
-                    <li class="menu__item"><a class="menu__link" href="kontakty.html">Kontakty</a></li>
-                    <li class="menu__item"><a class="menu__link menu__link--cz" href="index.html">CZ</a> / <a class="menu__link" href="index-en">EN</a></li>
-                </div>
-            </menu>
-        </nav>
-        <a href="index.html"><p class="heading--h1"><span class="heading--hidden">Preciosa</span> Trophies</p></a>
+    <header class="header header--short">
     </header>
     <main>
         <section class="section section--trophy">
@@ -46,7 +31,7 @@
                 <img src="img/inzenyrska.webp" alt="">
             </figure>
             <div class="section--trophy__text-box text-box">
-                <div>
+                <div class="grow">
                     <div>
                         <h1 class="heading--h2">Inženýrská akademie ČR</h1>
                         <small class="subheading">trofej za vítězný projekt</small>
@@ -69,13 +54,14 @@
                             tónu a do poslední části vyrobené
                             z českého křišťálu.</p>
                     <a class="rozbalovatko" href="#">Více</a>
-                    <p class="rozmer">Rozměr: 327 x 131 x 70 mm</p>
+                    <!--<p class="rozmer">Rozměr: 327 x 131 x 70 mm</p>-->
                 </div>
                 <div class="text-box__picture-box">
                     <figure><img src="img/darky-1.webp" alt=""></figure>
                     <figure><img src="img/darky-1.webp" alt=""></figure>
                     <figure><img src="img/darky-1.webp" alt=""></figure>
                 </div>
+                <div class="text-box__button-box button-box"><a class="button" href="inzenyrska-akademie-cr.html">To chci</a></div>
             </div>
         </section>
     </main>
@@ -84,12 +70,14 @@
                 var toggleLink = document.querySelector('.rozbalovatko');
                 var textBoxPictureBox = document.querySelector('.text-box__picture-box');
                 var textBoxTexts = document.querySelectorAll('.text-box__text');
+                var textBoxGrow = document.querySelector('.grow');
                 var textBoxTextHidden = document.querySelector('.text-box__text--hidden');;
             
                 toggleLink.addEventListener('click', function(event) {
                     event.preventDefault(); // Prevent default link behavior
                     textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
                     textBoxTextHidden.classList.toggle('text-box__text--show'); // Show hidden text
+                    textBoxGrow.classList.toggle('grow--hidden');
                     textBoxTexts.forEach(function(textBoxText) {
                         textBoxText.classList.toggle('line-unset'); // Remove line clamp
                     });

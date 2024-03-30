@@ -113,12 +113,12 @@ h2, .heading--h2 {
     color: var(--basic-black);
 }
 
-.heading--hidden {
+.heading--vymena {
     content: url(logo.svg);
     width: 320px;
 }
 
-.text--hidden {
+.text--hidden, .heading--hidden {
     display: block;
     font-size: 0;
     margin: 0;
@@ -548,6 +548,10 @@ li::marker {
     justify-content: center;
 }
 
+.article-box--padding {
+    padding-top: 2rem;
+}
+
 .section--interest__text-box h2 {
     font-size: 1.5rem;
     text-align: left;
@@ -873,15 +877,50 @@ li::marker {
         text-align: left;
     }
 
+    /*.section--trophy {
+        display: flex;
+        padding: 0 12rem;
+        gap: 4rem;
+        text-align: left;
+    }*/
+
     .section--trophy__picture-box {
         background-color: var(--sec-sand);
         padding: 3rem;
-        width: 40%;
         box-sizing: border-box;
     }
 
+    @media screen and (min-width: 1197px){
+        .section--trophy__text-box {
+            width: 50%;
+        }
+
+        .section--trophy__picture-box {
+            width: 50%;
+        }
+    }
+
+    @media screen and (min-width: 1434px){
+        .section--trophy__text-box {
+            width: 55%;
+        }
+
+        .section--trophy__picture-box {
+            width: 45%;
+        }
+    }
+
+    @media screen and (min-width: 1750px){
+        .section--trophy__text-box {
+            width: 60%;
+        }
+
+        .section--trophy__picture-box {
+            width: 40%;
+        }
+    }
+
     .section--trophy__text-box {
-        width: 60%;
         display: flex;
         flex-direction: column;
     }
@@ -898,10 +937,18 @@ li::marker {
         margin-bottom: 2rem;
     }
 
-    .section--trophy__text-box > div:first-of-type {
-        min-height: 50%;
+    .grow {
         overflow: hidden;
         flex-grow: 1;
+    }
+
+    .grow--hidden {
+        overflow: auto;
+        flex-grow: 0;
+    }
+
+    .section:first-of-type {
+        padding-top: 0;
     }
 
 
@@ -918,6 +965,7 @@ li::marker {
     .text-box__picture-box {
         display: flex;
         gap: 1rem;
+        margin-top: 2rem;
     }
 
     .rozmer {
@@ -952,4 +1000,25 @@ li::marker {
 
     .text-box__text--show {
         display: block;
+    }
+
+    .text-box__button-box {
+        margin-block: 3rem 1rem !important;
+    }
+
+    .text-box__button-box > .button {
+        color: var(--prim-dark-blue);
+        border: 2px solid var(--prim-dark-blue);
+    }
+
+    .header--short {
+        height: 6rem;
+    }
+
+    .header--short::before {
+        top: -200px;
+    }
+
+    .header--short::after {
+        top: -200px;
     }

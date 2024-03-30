@@ -33,139 +33,71 @@
                 </div>
                 <div>
                     <li class="menu__item"><a class="menu__link" href="image-book.pdf">Image Book</a></li>
-                    <li class="menu__item"><a class="menu__link" href="">Kontakty</a></li>
+                    <li class="menu__item"><a class="menu__link" href="kontakty.html">Kontakty</a></li>
                     <li class="menu__item"><a class="menu__link menu__link--cz" href="index.html">CZ</a> / <a class="menu__link" href="index-en">EN</a></li>
                 </div>
             </menu>
         </nav>
-        <a href="index.html"><p class="heading--h1"><span class="heading--hidden">Preciosa</span> Trophies</p></a>
+        <a href="index.html"><p class="heading--h1"><span class="heading--vymena">Preciosa</span> Trophies</p></a>
     </header>
     <main>
-        <section class="section--contact">
-                <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-duration="2000" data-aos-delay="1000">Kontaktujte nás</h1>
-                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="1250">Tým, který pro vás připraví dokonalou trofej...</p>
-              <figure>
-                  <img src="img/spolecna-fotografie-atelier.webp" alt="">
-                  <div class="figure__box box--left-down">
-                    <p class="heading--h3">Stáňa</p>
-                    <p>Designerka</p>
-                  </div>
-                  <div class="figure__box box--left-up">
-                    <p class="heading--h3">Kristina</p>
-                    <p>Projektová manažerka</p>
-                  </div>
-                  <div class="figure__box box--right-up">
-                    <p class="heading--h3">Jitka</p>
-                    <p>Designerka</p>
-                  </div>
-                  <div class="figure__box box--right-down">
-                    <p class="heading--h3">Tereza</p>
-                    <p>Vedoucí oddělení speciálních projektů</p>
-                  </div>
-              </figure>
+        <section class="section section--o-nas">
+                <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-duration="2000" data-aos-delay="1000">Technologie, které k výrobě používáme</h1>
+                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="1250">V oblasti sklářství existuje řada inovativních technologií, které umožňují transformovat obyčejné kusy skla do unikátních uměleckých děl a funkčních předmětů. Tyto technologie zahrnují pískování, lepení, hydroglazuru, vodní paprsek, mačkání a broušení. Každá z těchto metod nabízí jedinečné možnosti zpracování skla, od vytváření textur a vzorů přes spojování a modelování až po zdokonalování povrchu a tvaru. Každá technologie přináší do oboru sklářství svůj vlastní kreativní přístup a umožňuje umělcům, designérům a řemeslníkům vyjádřit svou kreativitu a oživit skleněné materiály nevídanými způsoby.</p>
+                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="1500">Každá z těchto technologií přináší do oblasti sklářství unikátní možnosti a způsoby zpracování skla pro různé estetické a funkční účely.</p>
         </section>
-        <section class="section section--pozadi section--form">
-            <video autoplay muted loop class="video-background">
-                <source src="pozadi.mp4"
-                type="video/mp4">
-            </video>
-            <div>
-                <form
-                  id="contact-form"
-                  class="contact-form"
-                  method="post"
-                  action-xhr="https://www.preciosa-trophies.com/ajax/contact.php"
-                  target="_top"
-                  on="submit-success:contact-form.clear"
-                >
-                  <div class="container">
-                    <div class="col-12">
-                      <label for="contact_name" class="hide">Vaše jméno *</label>
-                      <input
-                        id="contact_name"
-                        name="name"
-                        type="text"
-                        placeholder="Vaše jméno *"
-                        required
-                      />
-                    </div>
-                    <div class="col-hr-6 col-mr-6 col-lr-12">
-                        <label for="contact_phone" class="hide"
-                          >Telefonní číslo</label
-                        >
-                        <input
-                          id="contact_phone"
-                          name="phone"
-                          type="tel"
-                          placeholder="Telefonní číslo"
-                        />
-                      </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-hr-6 col-mr-6 col-lr-12">
-                      <label for="contact_email" class="hide"
-                        >E-mailová adresa *</label
-                      >
-                      <input
-                        id="contact_email"
-                        name="email"
-                        type="email"
-                        placeholder="E-mailová adresa *"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="contact_message" class="hide">Text zprávy</label>
-                      <textarea id="contact_message" name="message"></textarea>
-                    </div>
-                    <div class="col-12 padding-bottom">
-                      <input
-                        type="checkbox"
-                        id="gdprconfirm"
-                        name="gdprconfirm"
-                        value="gdprconfirm"
-                        required
-                      />
-                      <label for="gdprconfirm"
-                        >Souhlasím se zpracováním osobních údajů za účelem realizace
-                        obchodní příležitosti. *</label
-                      ><br />
-                      <input
-                        type="checkbox"
-                        id="newsletter2"
-                        name="newsletter2"
-                        value="newsletter2"
-                      />
-                      <label for="newsletter2"
-                        >Chci být informován o dalších novinkách od společnosti
-                        Preciosa.</label
-                      >
-                    </div>
-                    <div class="col-12 text-center padding-bottom">
-                      <amp-recaptcha-input
-                        layout="nodisplay"
-                        name="recaptcha_token"
-                        data-sitekey="6LeGJhAiAAAAAKyTZlDrjPAoba3vwc9aiXw405m3"
-                        data-action="contact"
-                      ></amp-recaptcha-input>
-                      <button type="submit">Odeslat zprávu</button>
-                    </div>
-                    <div class="col-12 text-center">
-                      <div submit-success>
-                        <template type="amp-mustache"
-                          >Zpráva byla úspěšně odeslána.</template
-                        >
-                      </div>
-                      <div submit-error>
-                        <template type="amp-mustache"></template>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-            </div>
-        </section>
+        <section class="section section--beige">
+          <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
+              <div class="box--text">
+                  <img src="img/inzenyrska.webp" alt="">
+                  <figcaption>
+                      <p class="img-heading">Inženýrská akademie&nbsp;ČR</p>
+                      <small class="subheading">Trofej za vítězný projekt</small>
+                      <div class="button-box"><a class="button" href="inzenyrska-akademie-cr.html">Prozkoumat</a></div>
+                  </figcaption>
+              </div>
+          </figure>
+          <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
+              <div class="box--text">
+                  <img src="img/mince.webp" alt="">
+                  <figcaption>
+                      <p class="img-heading">Česká&nbsp;mincovna</p>
+                      <small class="subheading">Crystal coin</small>
+                      <div><a class="button" href="#">prozkoumat</a></div>
+                  </figcaption>
+              </div>
+          </figure>
+          <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
+              <div class="box--text">
+                  <img src="img/EEPA.webp" alt="">
+                  <figcaption>
+                      <p class="img-heading">European
+                          Enterprise
+                          Promotion&nbsp;Awards</p>
+                      <small class="subheading">Grand Jury prize</small>
+                      <div><a class="button" href="#">prozkoumat</a></div>
+                  </figcaption>
+              </div>
+          </figure>
+      </section>
+      <section class="section">
+        <h2 data-aos="fade-zoom-in" data-aos-duration="2000">Technická dokonalost</h2>
+        <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="250">V naší práci se odráží 70 let zkušeností jedné z největších sklářských firem na světě. Precizní zpracování kombinuje ruční práci mistrů sklářů a inovativní technologie.</p>
+        <div class="article-box article-box--padding">
+          <article data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="500">
+              <h3>Pískování</h3>
+              <p>Ke každé zakázce přistupujeme individuálně. Děje se tak v každém případě, ať jde o jednu unikátní trofej nebo dlouhodobou spolupráci.</p>
+          </article>
+          <article data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="500">
+              <h3>Řezání vodním paprskem</h3>
+              <p>Originální design včetně grafického návrhu připravíme podle vašich představ do 14 dní. Disponujeme vlastním týmem in-house návrhářů a současně spolupracujeme s externími designéry z celého světa.</p>
+          </article>
+          <article data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="500">
+              <h3>Broušení a leštění</h3>
+              <p>Technologii výroby přizpůsobíme vašemu rozpočtu a termínu dodání. Křišťálové trofeje na míru nabízíme již od 5 tisíc korun.</p>
+          </article>
+      </div>
+    </section>
     </main>
     <footer>
         <div class="icon-container">
