@@ -20,6 +20,24 @@
     <meta property="og:site_name" content="Preciosa Trophies">
     <meta property="og:type" content="website">
     <meta property="fb:pages" content="">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+          var swiper1 = new Swiper('.mySwiper1', {
+            speed: 500,
+            loop: false,
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 10,
+            autoplay: true,
+          });
+
+        // Posunutí na druhý slide u swiper1
+        swiper1.slideTo(1);
+        swiper1.navigation.update();
+        });
+      </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let slideIndex = 0;
@@ -164,6 +182,37 @@
                         <img src="img/autoplay/Concours_Mondial.jpg" alt="">
                     </div>
                 </figure>
+        </section>
+        <section>
+            <div class="swiper swiper--full-width">
+                <div class="swiper-container">
+                  <div class="swiper-container__inner">
+                    <div class="mySwiper1">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/CM.webp" alt="Plesová fotografie - skupinka tancujících přítel"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="portfolio-portrety.html"><img class="picture" src="img/GQ.webp" alt="Portrétní fotografie - dívka"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/CM.webp" alt="Svatebí fotografie - muž a žena"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/GQ.webp" alt="Zvířecí fotografie - kráva"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/CM.webp" alt="Produktová fotografie - trofej AniFilm 2023"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/GQ.webp" alt="Párová fotografie - chlapec a dívka sedící na lavičce"></a>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="aos.css">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#173153">
+    <meta name="msapplication-TileColor" content="#173153">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Preciosa Trophies: odborníci na sklářskou výrobu">
+    <meta property="og:description" content="Oživte své okamžiky českým křišťálem! Naše unikátní ocenění, trofeje a dárky na míru ve vás zanechají nezapomenutelný dojem. Překročte hranice elegance – kontaktujte nás pro exkluzivní výtvory.">
+    <meta property="og:image" content="/2023-l4-web-campaign-NatalieRysava/og/Open-Graph-var-1.jpg">
+    <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
+    <meta property="og:site_name" content="Preciosa Trophies">
+    <meta property="og:type" content="website">
+    <meta property="fb:pages" content="">
+    <title>Inspirujte se</title>
+</head>
+<body>
+    <header class="header header--short">
+    </header>
+    <main>
+        <section class="section section--trophy">
+            <figure class="section--trophy__picture-box figure--square">
+                <img src="img/GQ.webp" alt="">
+            </figure>
+            <div class="section--trophy__text-box text-box">
+                <div class="grow">
+                    <div>
+                        <h1 class="heading--h2">GQ</h1>
+                        <small class="subheading">Křišťálové logo</small>
+                    </div>
+                        <p class="text-box__text">GQ - světoznámý pánský časopis o životním stylu
+                            vyhlásil v portugalském Lisabonu soutěž o Muže
+                            roku. Tento prestižní titul získávají ti nejvlivnější
+                            a nejúspěšnější muži světa. Při této příležitosti
+                            bylo vyrobeno 20 křišťálových trofejí, každá z nich zdobená 6 000 kusy broušených kamenů.
+                            Sklářský team Preciosa je ručně kus po kuse lepil
+                            celkem 600 hodin.</p>
+                    <a class="rozbalovatko" href="#">Více</a>
+                    <!--<p class="rozmer">Rozměr: 390 x 210 x 110 mm</p>-->
+                </div>
+                <div class="text-box__picture-box">
+                    <figure><img src="img/darky-1.webp" alt=""></figure>
+                    <figure><img src="img/darky-1.webp" alt=""></figure>
+                    <figure><img src="img/darky-1.webp" alt=""></figure>
+                </div>
+                <div class="text-box__button-box button-box"><a class="button" href="kontakty.html">To chci</a></div>
+            </div>
+        </section>
+    </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var toggleLink = document.querySelector('.rozbalovatko');
+                var textBoxPictureBox = document.querySelector('.text-box__picture-box');
+                var textBoxTexts = document.querySelectorAll('.text-box__text');
+                var textBoxGrow = document.querySelector('.grow');
+                var textBoxTextHidden = document.querySelector('.text-box__text--hidden');;
+            
+                toggleLink.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
+                    textBoxTexts.forEach(function(textBoxText) {
+                    textBoxText.classList.toggle('line-unset'); // Remove line clamp
+                    textBoxText.classList.toggle('text-box__text--show'); // Show hidden text
+                    });
+                    textBoxGrow.classList.toggle('grow--hidden');
+                    // Toggle text of the link
+                    if (toggleLink.textContent === 'Více') {
+                        toggleLink.textContent = 'Méně';
+                    } else {
+                        toggleLink.textContent = 'Více';
+                    }
+                });
+            });
+            </script>
+</body>
+</html>

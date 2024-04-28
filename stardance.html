@@ -23,60 +23,40 @@
     <title>Inspirujte se</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <menu class="nav__menu menu">
-                <div>
-                    <li class="menu__item"><a class="menu__link" href="index.html">Domů</a></li>
-                    <li class="menu__item"><a class="menu__link" href="inspirujte-se.html">Inspirujte se</a></li>
-                    <li class="menu__item"><a class="menu__link" href="o-nas.html">O nás</a></li>
-                </div>
-                <div>
-                    <li class="menu__item"><a class="menu__link" href="image-book.pdf">Image Book</a></li>
-                    <li class="menu__item"><a class="menu__link" href="kontakty.html">Kontakty</a></li>
-                    <li class="menu__item"><a class="menu__link menu__link--cz" href="index.html">CZ</a> / <a class="menu__link" href="index-en">EN</a></li>
-                </div>
-            </menu>
-        </nav>
-        <a href="index.html"><p class="heading--h1"><span class="heading--vymena">Preciosa</span> Trophies</p></a>
+    <header class="header header--short">
     </header>
     <main>
         <section class="section section--trophy">
             <figure class="section--trophy__picture-box figure--square">
-                <img src="img/inzenyrska.webp" alt="">
+                <img src="img/StarDance.webp" alt="">
             </figure>
             <div class="section--trophy__text-box text-box">
                 <div class="grow">
                     <div>
-                        <h1 class="heading--h2">Inženýrská akademie ČR</h1>
-                        <small class="subheading">trofej za vítězný projekt</small>
+                        <h1 class="heading--h2">StarDance</h1>
                     </div>
-                        <p class="text-box__text">Propojení tradiční sklářské výroby
-                            s vědou a technikou. To je spolupráce
-                            společnosti Preciosa a Inženýrské
-                            akademie ČR, která každoročně
-                            oceňuje vynikající technická
-                            díla a významný přínos k rozvoji
-                            inženýrského výzkumu v České
-                            republice.</p>
-                        <p class="text-box__text text-box__text--hidden">Ocenění bylo navrženo jako
-                            stylizace Resslova lodního šroubu,
-                            který má Inženýrská akademie ve svém
-                            logu. Tvar lehce evokuje křivku šroubu
-                            a zároveň tvarově připomíná siluetu
-                            poháru - tradiční trofeje. Ocenění je
-                            komponované do elegantního modrého
-                            tónu a do poslední části vyrobené
-                            z českého křišťálu.</p>
+                        <p class="text-box__text">Trofej Stardance navrhl architekt Jan Vlček. Cena
+                            symbolizuje deset spojených prutů ve tvaru hvězd, které
+                            ve finále rozkvetou v strom korunovaný symbolickou disco
+                            koulí. Deset prutů zakončených do tvaru hvězd symbolizuje
+                            deset tanečních párů, deset obručí zase představuje deset kol
+                            nebo také deset ročníků taneční soutěže. Trofej, která váží
+                            více než 5 kg, obdržel vítězný pár StarDance ročníku 2019.
+                            Ceně vévodí skleněná rautová koule s průměrem 100 mm,
+                            která je ručně dobrušovaná, leštěná a následně zafixovaná
+                            do podstavy trofeje, ručně odlévané z bronzu. Samotná
+                            bronzová podstava je broušená a následně leštěná tak, aby
+                            získala požadovanou patinu. Finální spojení surové bronzové
+                            podstavy a precizně vybroušeného křišťálu je dokonalé.</p>
                     <a class="rozbalovatko" href="#">Více</a>
-                    <!--<p class="rozmer">Rozměr: 327 x 131 x 70 mm</p>-->
+                    <!--<p class="rozmer">Rozměr: 390 x 210 x 110 mm</p>-->
                 </div>
                 <div class="text-box__picture-box">
                     <figure><img src="img/darky-1.webp" alt=""></figure>
                     <figure><img src="img/darky-1.webp" alt=""></figure>
                     <figure><img src="img/darky-1.webp" alt=""></figure>
                 </div>
-                <div class="text-box__button-box button-box"><a class="button" href="inzenyrska-akademie-cr.html">To chci</a></div>
+                <div class="text-box__button-box button-box"><a class="button" href="kontakty.html">To chci</a></div>
             </div>
         </section>
     </main>
@@ -91,11 +71,11 @@
                 toggleLink.addEventListener('click', function(event) {
                     event.preventDefault(); // Prevent default link behavior
                     textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
-                    textBoxTextHidden.classList.toggle('text-box__text--show'); // Show hidden text
-                    textBoxGrow.classList.toggle('grow--hidden');
                     textBoxTexts.forEach(function(textBoxText) {
-                        textBoxText.classList.toggle('line-unset'); // Remove line clamp
+                    textBoxText.classList.toggle('line-unset'); // Remove line clamp
+                    textBoxText.classList.toggle('text-box__text--show'); // Show hidden text
                     });
+                    textBoxGrow.classList.toggle('grow--hidden');
                     // Toggle text of the link
                     if (toggleLink.textContent === 'Více') {
                         toggleLink.textContent = 'Méně';

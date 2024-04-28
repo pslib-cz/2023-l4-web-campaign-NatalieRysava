@@ -61,7 +61,7 @@
                     <figure><img src="img/darky-1.webp" alt=""></figure>
                     <figure><img src="img/darky-1.webp" alt=""></figure>
                 </div>
-                <div class="text-box__button-box button-box"><a class="button" href="inzenyrska-akademie-cr.html">To chci</a></div>
+                <div class="text-box__button-box button-box"><a class="button" href="kontakty.html">To chci</a></div>
             </div>
         </section>
     </main>
@@ -76,11 +76,11 @@
                 toggleLink.addEventListener('click', function(event) {
                     event.preventDefault(); // Prevent default link behavior
                     textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
-                    textBoxTextHidden.classList.toggle('text-box__text--show'); // Show hidden text
-                    textBoxGrow.classList.toggle('grow--hidden');
                     textBoxTexts.forEach(function(textBoxText) {
-                        textBoxText.classList.toggle('line-unset'); // Remove line clamp
+                    textBoxText.classList.toggle('line-unset'); // Remove line clamp
+                    textBoxText.classList.toggle('text-box__text--show'); // Show hidden text
                     });
+                    textBoxGrow.classList.toggle('grow--hidden');
                     // Toggle text of the link
                     if (toggleLink.textContent === 'Více') {
                         toggleLink.textContent = 'Méně';
