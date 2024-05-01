@@ -28,14 +28,23 @@
             speed: 500,
             loop: false,
             slidesPerView: 3,
-            centeredSlides: true,
-            spaceBetween: 10,
-            autoplay: true,
-          });
+            centeredSlides: false,
+            spaceBetween: 24,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+        });
 
-        // Posunutí na druhý slide u swiper1
-        swiper1.slideTo(1);
-        swiper1.navigation.update();
+          var swiperContainer = document.querySelector('.mySwiper1');
+
+        swiperContainer.addEventListener('mouseenter', function() {
+            swiper1.autoplay.stop();
+        });
+
+        swiperContainer.addEventListener('mouseleave', function() {
+            swiper1.autoplay.start();
+        });
         });
       </script>
     <script>
@@ -84,13 +93,13 @@
             <menu class="nav__menu menu">
                 <div>
                     <li class="menu__item"><a class="menu__link" href="index.html">Domů</a></li>
-                    <li class="menu__item"><a class="menu__link" href="inspirujte-se.html">Inspirujte se</a></li>
+                    <li class="menu__item"><a class="menu__link chosen" href="inspirujte-se.html">Inspirujte se</a></li>
                     <li class="menu__item"><a class="menu__link" href="o-nas.html">O nás</a></li>
                 </div>
                 <div>
                     <li class="menu__item"><a class="menu__link" href="image-book.pdf">Image Book</a></li>
                     <li class="menu__item"><a class="menu__link" href="kontakty.html">Kontakty</a></li>
-                    <li class="menu__item"><a class="menu__link menu__link--cz" href="index.html">CZ</a> / <a class="menu__link" href="index-en">EN</a></li>
+                    <li class="menu__item"><a class="menu__link chosen" href="index.html">CZ</a> / <a class="menu__link" href="index-en">EN</a></li>
                 </div>
             </menu>
         </nav>
@@ -153,64 +162,62 @@
             <h2 class="heading--hidden">Výhody</h2>
             <div class="article-box">
                 <article>
-                    <h3>Individuální přístup</h3>
-                    <p>Ke každé zakázce přistupujeme individuálně. Děje se tak v každém případě, ať jde o jednu unikátní trofej nebo dlouhodobou spolupráci.</p>
+                    <h3 data-aos="fade-zoom-in" data-aos-duration="2000">Individuální přístup</h3>
+                    <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="aos-init aos-animate space-for-animation">Ke každé zakázce přistupujeme individuálně. Děje se tak v každém případě, ať jde o jednu unikátní trofej nebo dlouhodobou spolupráci.</p>
                 </article>
                 <article>
-                    <h3>Originální design</h3>
-                    <p>Originální design včetně grafického návrhu připravíme podle vašich představ do 14 dní. Disponujeme vlastním týmem in-house návrhářů a současně spolupracujeme s externími designéry z celého světa.</p>
+                    <h3 data-aos="fade-zoom-in" data-aos-duration="2000">Originální design</h3>
+                    <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="aos-init aos-animate space-for-animation">Originální design včetně grafického návrhu připravíme podle vašich představ do 14 dní. Disponujeme vlastním týmem in-house návrhářů a současně spolupracujeme s externími designéry z celého světa.</p>
                 </article>
                 <article>
-                    <h3>Technologie a cena</h3>
-                    <p>Technologii výroby přizpůsobíme vašemu rozpočtu a termínu dodání. Křišťálové trofeje na míru nabízíme již od 5 tisíc korun.</p>
+                    <h3 data-aos="fade-zoom-in" data-aos-duration="2000">Technologie a cena</h3>
+                    <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="aos-init aos-animate space-for-animation">Technologii výroby přizpůsobíme vašemu rozpočtu a termínu dodání. Křišťálové trofeje na míru nabízíme již od 5 tisíc korun.</p>
                 </article>
             </div>
         </section>
         <section class="section section--inspiration">
-                <figure data-aos="fade-zoom-in" data-aos-duration="1000">
-                    <div class="box--text">
-                        <img src="img/autoplay/CM.jpg" alt="">
-                    </div>
-                </figure>
-                <figure data-aos="fade-zoom-in" data-aos-duration="1000">
-                    <div class="box--text">
-                        <img src="img/autoplay/Kniha_roku.jpg" alt="">
-                    </div>
-                </figure>
-                <figure data-aos="fade-zoom-in" data-aos-duration="1000">
-                    <div class="box--text">
-                        <img src="img/autoplay/Concours_Mondial.jpg" alt="">
-                    </div>
-                </figure>
-        </section>
-        <section>
             <div class="swiper swiper--full-width">
                 <div class="swiper-container">
-                  <div class="swiper-container__inner">
                     <div class="mySwiper1">
                       <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a class="picture--hover" href="#"><img class="picture" src="img/CM.webp" alt="Plesová fotografie - skupinka tancujících přítel"></a>
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/anifilm.webp" alt=""></a>
                         </div>
                         <div class="swiper-slide">
-                            <a class="picture--hover" href="portfolio-portrety.html"><img class="picture" src="img/GQ.webp" alt="Portrétní fotografie - dívka"></a>
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/bryle.webp" alt=""></a>
                         </div>
                         <div class="swiper-slide">
-                            <a class="picture--hover" href="#"><img class="picture" src="img/CM.webp" alt="Svatebí fotografie - muž a žena"></a>
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/dvere-mesity.webp" alt=""></a>
                         </div>
                         <div class="swiper-slide">
-                            <a class="picture--hover" href="#"><img class="picture" src="img/GQ.webp" alt="Zvířecí fotografie - kráva"></a>
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/Kniha_roku.webp" alt=""></a>
                         </div>
                         <div class="swiper-slide">
-                            <a class="picture--hover" href="#"><img class="picture" src="img/CM.webp" alt="Produktová fotografie - trofej AniFilm 2023"></a>
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/Kohinoor_box.webp" alt=""></a>
                         </div>
                         <div class="swiper-slide">
-                            <a class="picture--hover" href="#"><img class="picture" src="img/GQ.webp" alt="Párová fotografie - chlapec a dívka sedící na lavičce"></a>
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/kostky.webp" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/Laver_cup.webp" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/Leknin_maxi.webp" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/manzetaky.webp" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/mistr-kristalu.webp" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/pes.webp" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="picture--hover" href="#"><img class="picture" src="img/autoplay/sda.webp" alt=""></a>
                         </div>
                       </div>
-                      <div class="swiper-pagination"></div>
                     </div>
-                  </div>
                 </div>
             </div>
         </section>

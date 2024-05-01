@@ -54,7 +54,7 @@ html {
 }
 
 /* Hover effect */
-.menu__link:hover, .menu__link--cz {
+.menu__link:hover, .chosen {
     color: var(--prim-gold);
 }
 
@@ -585,14 +585,10 @@ li::marker {
     bottom: 50%;
     transform: translateY(50%);
     left: 0;
-    z-index: -1;
 }
 
 
 .section--inspiration {
-    display: grid;
-    grid-gap: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
     position: relative;
 }
 
@@ -1047,14 +1043,20 @@ li::marker {
     }
     
     .swiper {
-        padding-bottom: 2rem;
         overflow: hidden;
-        margin: 2rem 10%;
     }
-    
+
     .swiper-container {
         position: relative;
-        padding-bottom: calc(2/3 * (100% - 10px))
+    }
+
+    .space-for-animation {
+        padding-bottom: 3rem;
+    }
+
+    .section--technologie, .section--benefits {
+        padding-bottom: 0;
+        margin-bottom: -3rem;
     }
     
     .swiper-container__inner {
@@ -1089,4 +1091,9 @@ li::marker {
         width: 100%;
     }
    
+
+    .youtube-video {
+        height: calc(100vh - 8rem);
+        aspect-ratio: 16 / 9;
+    }
     
