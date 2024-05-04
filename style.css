@@ -265,7 +265,7 @@ figure {
     padding: 6rem;
 }
 
-.section--beige img {
+.img--dlazdice {
     object-fit: cover;
     transition: .5s;
     aspect-ratio: 1;
@@ -330,22 +330,21 @@ div:has(>.button) {
   }
 
 
-  .section--beige .box--text:hover img {
+.box--text:hover img {
     transform: scale(1.25);
   }
-
-  .section--beige .box--text img {
+.box--text img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.section--beige .box--text {
+.box--text {
     position: relative;
     display: inline-block;
 }
 
-.section--beige .box--text:before {
+.box--text:before {
     content: "";
     position: absolute;
     top: 0;
@@ -357,7 +356,7 @@ div:has(>.button) {
     transition: background-color 0.3s ease;
 }
 
-.section--beige .box--text:hover:before {
+.box--text:hover:before {
     background-color: var(--sec-sky-blue);
     opacity: .5;
 }
@@ -369,6 +368,7 @@ div:has(>.button) {
 figcaption {
     position: absolute;
     width: 100%;
+    text-align: center;
     padding: 1em;
     z-index: 1;
     top: 50%;
@@ -392,6 +392,10 @@ figcaption {
     padding-inline: calc((100vw - (2 * (6rem + 1.5rem + 2rem))) / (100 / 3));
 }
 
+.section--trophy .img-heading {
+    font-size: 1.25rem;
+}
+
 .subheading {
     font-family: 'OpenSans', sans-serif;
     text-transform: uppercase;
@@ -402,7 +406,7 @@ figcaption .subheading {
     font-size: calc((100vw - (2 * (6rem + 1.5rem + 2rem))) / (100 / 1.5));
 }
 
-.section--beige figure {
+figure {
     overflow: hidden;
 }
 
