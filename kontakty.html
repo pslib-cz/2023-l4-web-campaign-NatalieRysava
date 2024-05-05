@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#173153">
+    <link rel="stylesheet" href="form.js">
     <meta name="msapplication-TileColor" content="#173153">
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Preciosa Trophies: odborníci na sklářskou výrobu">
@@ -69,103 +70,97 @@
                 <source src="pozadi.mp4"
                 type="video/mp4">
             </video>
-            <div>
-                <form
-                  id="contact-form"
-                  class="contact-form"
-                  method="post"
-                  action-xhr="https://www.preciosa-trophies.com/ajax/contact.php"
-                  target="_top"
-                  on="submit-success:contact-form.clear"
-                >
-                  <div class="container">
-                    <div class="col-12">
-                      <label for="contact_name" class="hide">Vaše jméno *</label>
-                      <input
-                        id="contact_name"
-                        name="name"
-                        type="text"
-                        placeholder="Vaše jméno *"
-                        required
-                      />
-                    </div>
-                    <div class="col-hr-6 col-mr-6 col-lr-12">
-                        <label for="contact_phone" class="hide"
-                          >Telefonní číslo</label
-                        >
-                        <input
-                          id="contact_phone"
-                          name="phone"
-                          type="tel"
-                          placeholder="Telefonní číslo"
-                        />
-                      </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-hr-6 col-mr-6 col-lr-12">
-                      <label for="contact_email" class="hide"
-                        >E-mailová adresa *</label
-                      >
-                      <input
-                        id="contact_email"
-                        name="email"
-                        type="email"
-                        placeholder="E-mailová adresa *"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="contact_message" class="hide">Text zprávy</label>
-                      <textarea id="contact_message" name="message"></textarea>
-                    </div>
-                    <div class="col-12 padding-bottom">
-                      <input
-                        type="checkbox"
-                        id="gdprconfirm"
-                        name="gdprconfirm"
-                        value="gdprconfirm"
-                        required
-                      />
-                      <label for="gdprconfirm"
-                        >Souhlasím se zpracováním osobních údajů za účelem realizace
-                        obchodní příležitosti. *</label
-                      ><br />
-                      <input
-                        type="checkbox"
-                        id="newsletter2"
-                        name="newsletter2"
-                        value="newsletter2"
-                      />
-                      <label for="newsletter2"
-                        >Chci být informován o dalších novinkách od společnosti
-                        Preciosa.</label
-                      >
-                    </div>
-                    <div class="col-12 text-center padding-bottom">
-                      <amp-recaptcha-input
-                        layout="nodisplay"
-                        name="recaptcha_token"
-                        data-sitekey="6LeGJhAiAAAAAKyTZlDrjPAoba3vwc9aiXw405m3"
-                        data-action="contact"
-                      ></amp-recaptcha-input>
-                      <button type="submit">Odeslat zprávu</button>
-                    </div>
-                    <div class="col-12 text-center">
-                      <div submit-success>
-                        <template type="amp-mustache"
-                          >Zpráva byla úspěšně odeslána.</template
-                        >
-                      </div>
-                      <div submit-error>
-                        <template type="amp-mustache"></template>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+            <!-- 
+    =======================================================================
+
+    This is a working contact form. To receive email, 
+    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+
+    Create Access Key here 👉 https://web3forms.com/
+
+    =======================================================================
+ -->
+
+        <h2 class="text--hidden">
+          Kontaktní formulář
+        </h2>
+        <p class="heading--h2">
+          Pošlete nám zprávu
+        </p>
+      <div>
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="c00052ba-3e6f-4e96-a86e-0767f9387860"/>
+          <input type="hidden" name="subject" value="New Submission from Web3Forms"/>
+          <input type="checkbox" name="botcheck" id="" style="display: none;"/>
+          <div class="container">
+            <div class="box--left">
+              <label for="name">Celé jméno *</label>
+              <input type="text" name="name" id="name" placeholder="Jan Novák"/>
             </div>
-        </section>
+            <div class="box--left">
+              <label for="phone" class="text-sm">Telefonní číslo</label>
+              <input type="text" name="phone" id="phone" placeholder="(+420) 123 456 789"/>
+            </div>
+          </div>
+          <div class="box--left">
+            <label for="email">E-mailová adresa *</label>
+            <input type="email" name="email" id="email" placeholder="vy@spolecnost.com"/>
+          </div>
+          <div class="box--left">
+            <label for="message">Vaše zpráva *</label>
+            <textarea rows="5" name="message" id="message" placeholder="Vaše zpráva" required></textarea>
+          </div>
+          <div>
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                id="souhlas-s-gdpr"
+                name="souhlas-s-gdpr"
+                value="ano"
+                required
+              />
+              <label for="souhlas-s-gdpr"
+                >Souhlasím se zpracováním <a class="chosen" href="gdpr.html">osobních údajů</a> za účelem realizace
+                obchodní příležitosti. *</label
+              ><br />
+            </div>
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                id="odber-newsletteru"
+                name="odber-newsletteru"
+                value="ano"
+              />
+              <label for="odber-newsletteru"
+                >Chci být informován o dalších novinkách od společnosti
+                Preciosa.</label
+              >
+            </div>
+          </div>
+          <div class="button-box">
+            <button class="button" type="submit">
+              Odeslat zprávu
+            </button>
+          </div>
+          <p id="result"></p>
+        </form>
+      </div>
+      </section>
+      <section class="section">
+        <h2>Preciosa Beauty, s.r.o.</h2>
+        <div class="container--adresa">
+          <div>
+            <p>Průmyslová 1872/18</p>
+            <p>466 01 Jablonec nad Nisou</p>
+            <p>Česká republika</p>
+          </div>
+          <div class="box--kontakt">
+            <a href="tel:+420777291336">+420 777 291 336</a>
+            <a href="mailto:tereza.rudolfova@preciosa.com">tereza.rudolfova@preciosa.com</a>
+          </div>
+        </div>
+        <img class="mapa" src="img/mapa.png" alt="">
+      </section>
     </main>
     <footer>
         <div class="icon-container">
