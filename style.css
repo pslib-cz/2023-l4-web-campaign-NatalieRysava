@@ -54,11 +54,11 @@ html {
 }
 
 /* Hover effect */
-.menu__link:hover, .chosen {
+.menu__link:hover, .chosen, .chosen--email:hover {
     color: var(--prim-gold);
 }
 
-.header--short .chosen {
+.header--short .chosen, .section__path-link:hover, .chosen--email {
     color: var(--sec-sky-blue);
 }
 
@@ -504,6 +504,25 @@ li::marker {
     color: var(--prim-gold);
   }
 
+  .section--gdpr {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-block: 0;
+    padding-bottom: 2rem;
+  }
+
+  .section--gdpr:last-of-type {
+    padding-bottom: 3rem;
+  }
+
+  .section--gdpr p, .section--gdpr li {
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  p + .box-duvody {
+    margin-block: 2rem;
+}
 
 
 
@@ -1215,4 +1234,8 @@ li::marker {
         width: 35%;
         position: relative;
         margin: 0 auto;
+    }
+
+    .section__path-link--icon-home:hover li::before {
+        content: url(icons/icon_home-hover.svg);
     }
