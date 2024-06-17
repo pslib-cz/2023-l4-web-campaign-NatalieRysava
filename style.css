@@ -254,6 +254,10 @@ footer::after {
     background-color: #E8DEC8;
 }
 
+.section--inspiration {
+    padding-inline: 6rem;
+}
+
 img {
     display: block;
     width: 100%;
@@ -261,6 +265,10 @@ img {
     margin: 0;
     padding: 0;
     object-fit: cover;
+}
+
+.article__figure img {
+    object-fit: contain;
 }
 
 p {
@@ -383,7 +391,7 @@ figure {
 .box--text:hover:before {
     background-color: var(--sec-sky-blue);
     opacity: .5;
-}
+} 
 
 .box--text {
     position: relative;
@@ -1236,6 +1244,6 @@ li::marker {
         margin: 0 auto;
     }
 
-    .section__path-link--icon-home:hover li::before {
+    /* .section__path-link--icon-home:hover li::before {
         content: url(icons/icon_home-hover.svg);
-    }
+    } */
