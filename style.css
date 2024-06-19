@@ -903,6 +903,7 @@ li::marker {
         left: 1rem;
         top: 7rem;
         text-align: right;
+        max-width: 200px;
     }
 
     .box--right-down {
