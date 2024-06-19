@@ -1185,6 +1185,7 @@ li::marker {
         margin: 2rem 6rem;
         margin-bottom: 1.2rem;
         font-size: 0.875rem;
+        padding-left: 0;
     }
 
     .section__path-link span {
@@ -1197,18 +1198,18 @@ li::marker {
         left: .75rem;
     }
 
-    .section__path-link--icon-home li::before {
+    li:has(.section__path-link--icon-home)::before {
         content: url(icons/icon_home.svg);
         display: inline-block;
         vertical-align: middle;
         margin-top: -.25rem;
     }
 
-    .section__path-link--icon-home li {
+    li:has(.section__path-link--icon-home) {
         list-style-type: none;
     }
 
-    .section__path-link--divider-dot {
+    li:has(.section__path-link--divider-dot) {
         position: relative;
         left: 1rem;
     }
