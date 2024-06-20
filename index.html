@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#173153">
+    <link rel="stylesheet" href="hamburger.css">
     <meta name="msapplication-TileColor" content="#173153">
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Preciosa Trophies: odborníci na sklářskou výrobu">
@@ -55,8 +56,15 @@
             type="video/mp4">
         </video>
         <a href="#main" class="scroll"><img src="down--white.svg"></a>
-        <nav class="nav">
-            <menu class="nav__menu menu">
+        <nav class="nav navbar">
+            <div class="navbar__hamburger">
+                <a class="hamburger-menu" href="javascript:void(0)">
+                    <span class="hamburger-menu__line"></span>
+                    <span class="hamburger-menu__line"></span>
+                    <span class="hamburger-menu__line"></span>
+                </a>
+            </div>
+            <menu class="nav__menu menu navbar__menu hamburger-menu-list navbar__menu--hidden">
                 <div>
                     <li class="menu__item"><a class="menu__link chosen" href="index.html">Domů</a></li>
                     <li class="menu__item"><a class="menu__link" href="inspirujte-se.html">Inspirujte se</a></li>
@@ -80,7 +88,7 @@
         <section  id="trophies" class="section--full-width">
             <h2 class="heading--hidden">Trofeje</h2>
             <div class="section__dlazdice">
-                <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
+                <figure class="figure--square item1" data-aos="fade-zoom-in" data-aos-duration="1000">
                     <div class="box--text">
                         <img class="img--dlazdice" src="img/inzenyrska.webp" alt="">
                         <figcaption>
@@ -90,7 +98,7 @@
                         </figcaption>
                     </div>
                 </figure>
-                <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
+                <figure class="figure--square item2" data-aos="fade-zoom-in" data-aos-duration="1000">
                     <div class="box--text">
                         <img class="img--dlazdice" src="img/mince.webp" alt="">
                         <figcaption>
@@ -100,7 +108,7 @@
                         </figcaption>
                     </div>
                 </figure>
-                <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
+                <figure class="figure--square item3" data-aos="fade-zoom-in" data-aos-duration="1000">
                     <div class="box--text">
                         <img class="img--dlazdice" src="img/EEPA.webp" alt="">
                         <figcaption>
@@ -112,7 +120,7 @@
                         </figcaption>
                     </div>
                 </figure>
-                <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
+                <figure class="figure--square item4" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
                     <div class="box--text">
                         <img class="img--dlazdice" src="img/OSA.webp" alt="">
                         <figcaption>
@@ -121,7 +129,7 @@
                         </figcaption>
                     </div>
                 </figure>
-                <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
+                <figure class="figure--square item5" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
                     <div class="box--text">
                         <img class="img--dlazdice" src="img/spolecna-fotografie-vzorkovna2.webp" alt="">
                         <figcaption>
@@ -130,7 +138,7 @@
                         </figcaption>
                     </div>
                 </figure>
-                <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
+                <figure class="figure--square item6" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
                     <div class="box--text">
                         <img class="img--dlazdice" src="img/StarDance.webp" alt="">
                         <figcaption>
@@ -139,7 +147,7 @@
                         </figcaption>
                     </div>
                 </figure>
-                <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
+                <figure class="figure--square item7" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
                     <div class="box--text">
                         <img class="img--dlazdice" src="img/GQ.webp" alt="">
                         <figcaption>
@@ -149,7 +157,7 @@
                         </figcaption>
                     </div>
                 </figure>
-                <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
+                <figure class="figure--square item8" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
                     <div class="box--text">
                         <img class="img--dlazdice" src="img/Stadion.webp" alt="">
                         <figcaption>
@@ -159,7 +167,7 @@
                         </figcaption>
                     </div>
                 </figure>
-                <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
+                <figure class="figure--square item9" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="0">
                     <div class="box--text">
                         <img class="img--dlazdice" src="img/mesita.webp" alt="">
                         <figcaption>
@@ -230,5 +238,6 @@
     <script type="text/javascript">
         AOS.init();
     </script>
+    <script src="hamburger.js"></script>
 </body>
 </html>

@@ -799,22 +799,7 @@ li::marker {
     .footer-container__link, .footer-container__text {
         color: var(--basic-white);
     }
-    @media screen and (max-width: 768px){
-        .section__dlazdice {
-            grid-gap: 3rem;
-            grid-template-columns: repeat(1, 1fr);
-            padding: 3rem;
-        } /* dočasní, chci dát carousel */
     
-        .section--logo {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    
-        .icon-container {
-            flex-direction: row;
-            justify-content: center;
-        }
-    }
 
     .section--contact figure {
         position: relative;
@@ -1261,3 +1246,102 @@ li::marker {
     /* .section__path-link--icon-home:hover li::before {
         content: url(icons/icon_home-hover.svg);
     } */
+
+    @media only screen and (max-width: 1040px) {
+        .heading--h1 {
+            top: auto;
+        }
+
+        .nav__menu, .nav__menu div {
+            justify-content: center;
+        }
+
+        .nav__menu div:first-of-type {
+            margin-right: 0;
+        }
+
+        .nav__menu div:last-of-type {
+            margin-left: 0;
+        }
+    }
+
+    @media only screen and (max-width: 661px) {
+        .heading--h1 {
+            top: 3rem;
+            left: calc(240px / 2 + 3rem);
+        }
+
+        .heading--vymena {
+            content: url(logo.svg);
+            width: 240px;
+        }
+
+        .heading--h1 {
+            font-size: 2.25rem;
+        }
+    }
+
+    @media only screen and (max-width: 1176px) {
+        figcaption .button-box {
+            margin-block: 3rem 2rem;
+        }
+    }
+
+    @media only screen and (max-width: 960px) {
+        .section__dlazdice {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "item1 item2"
+                "item4 item3"
+                "item9 item6"
+                "item8 item7"
+                "item5 item5";
+        }
+    
+        .item1 { grid-area: item1; }
+        .item2 { grid-area: item2; }
+        .item3 { grid-area: item3; }
+        .item4 { grid-area: item4; }
+        .item5 { grid-area: item5; }
+        .item6 { grid-area: item6; }
+        .item7 { grid-area: item7; }
+        .item8 { grid-area: item8; }
+        .item9 { grid-area: item9; }
+    }
+
+    @media screen and (max-width: 768px){
+        .section__dlazdice {
+            grid-gap: 3rem;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item9"
+            "item6"
+            "item7"
+            "item8"
+            "item5";
+            padding: 3rem;
+        } /* dočasní, chci dát carousel */
+
+        figcaption .subheading {
+            font-size: calc((100vw - (2 * (1.5rem + 2rem))) / (100 / 4.5));
+        }
+
+        .img-heading {
+            font-size: calc((100vw - (2 * (1.5rem + 2rem))) / (100 / 9));
+            padding-inline: calc((100vw - (2 * (1.5rem + 2rem))) /(100 / 9));
+        }
+    
+        .section--logo {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        .icon-container {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    
