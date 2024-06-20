@@ -1344,4 +1344,32 @@ li::marker {
             justify-content: center;
         }
     }
+
+    @media only screen and (max-width: 480px) {
+        .heading--h1 {
+            font-size: 1.5rem;
+        }
+
+        .heading--vymena {
+            width: 160px;
+        }
+
+        .heading--h1 {
+            left: calc(160px / 2 + 3rem);
+        }
+    }
+
+    @media only screen and (max-width: 360px) {
+        .heading--h1 {
+            font-size: 1.2rem;
+        }
+
+        .heading--vymena {
+            width: 128px;
+        }
+
+        .heading--h1 {
+            left: calc(128px / 2 + 3rem);
+        }
+    }
     
