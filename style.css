@@ -1281,6 +1281,10 @@ li::marker {
         figcaption .button-box {
             margin-block: 3rem 2rem;
         }
+        
+        .section--logo {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 
     @media only screen and (max-width: 960px) {
@@ -1303,6 +1307,12 @@ li::marker {
         .item7 { grid-area: item7; }
         .item8 { grid-area: item8; }
         .item9 { grid-area: item9; }
+
+        
+        .section--logo {
+            grid-gap: 2rem 3rem;
+            padding: 1.5rem;
+        }
     }
 
     @media screen and (max-width: 768px){
@@ -1321,6 +1331,11 @@ li::marker {
             "item5";
             padding: 3rem;
         } /* dočasní, chci dát carousel */
+
+        .section--logo {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem 2rem;
+        }
 
         figcaption .subheading {
             font-size: calc((100vw - (2 * (1.5rem + 2rem))) / (100 / 4.5));
@@ -1346,6 +1361,10 @@ li::marker {
             font-size: 1.5rem;
         }
 
+        .section--logo {
+            padding: 0;
+        }
+
         .heading--vymena {
             width: 160px;
         }
@@ -1357,14 +1376,18 @@ li::marker {
 
     @media only screen and (max-width: 360px) {
         .heading--h1 {
-            font-size: 1.2rem;
+            font-size: 1.35rem;
+        }
+
+        .section--logo {
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .heading--vymena {
-            width: 128px;
+            width: 144px;
         }
 
         .heading--h1 {
-            left: calc(128px / 2 + 3rem);
+            left: calc(144px / 2 + 3rem);
         }
     }
