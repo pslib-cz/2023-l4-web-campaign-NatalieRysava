@@ -1243,10 +1243,6 @@ li::marker {
         margin: 0 auto;
     }
 
-    /* .section__path-link--icon-home:hover li::before {
-        content: url(icons/icon_home-hover.svg);
-    } */
-
     @media only screen and (max-width: 1040px) {
         .heading--h1 {
             top: auto;
