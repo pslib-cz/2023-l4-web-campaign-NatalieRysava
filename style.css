@@ -885,7 +885,7 @@ li::marker {
 
     .box--left-up {
         position: absolute;
-        left: 1rem;
+        left: -2rem;
         top: 7rem;
         text-align: right;
         max-width: 200px;
@@ -1281,6 +1281,10 @@ li::marker {
         figcaption .button-box {
             margin-block: 3rem 2rem;
         }
+
+        .mapa {
+            width: 45%;
+        }
         
         .section--logo {
             grid-template-columns: repeat(4, 1fr);
@@ -1313,6 +1317,10 @@ li::marker {
             grid-gap: 2rem 3rem;
             padding: 1.5rem;
         }
+
+        .mapa {
+            width: 60%;
+        }
     }
 
     @media screen and (max-width: 768px){
@@ -1331,6 +1339,10 @@ li::marker {
             "item5";
             padding: 3rem;
         } /* dočasní, chci dát carousel */
+
+        .mapa {
+            width: 80%;
+        }
 
         .section--logo {
             grid-template-columns: repeat(3, 1fr);
