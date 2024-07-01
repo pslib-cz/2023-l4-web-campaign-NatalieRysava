@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#173153">
+    <link rel="stylesheet" href="hamburger.css">
     <meta name="msapplication-TileColor" content="#173153">
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Preciosa Trophies: odborníci na sklářskou výrobu">
@@ -27,13 +28,18 @@
           var swiper1 = new Swiper('.mySwiper1', {
             speed: 500,
             loop: false,
-            slidesPerView: 3,
+            slidesPerView: 1,
             centeredSlides: false,
             spaceBetween: 80,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: true,
             },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                }
+            }
         });
 
           var swiperContainer = document.querySelector('.mySwiper1');
@@ -54,8 +60,15 @@
         <img src="img/pozadi.jpg" alt="" class="photo-background">
         <a href="#onas" class="scroll"><img src="down--white.svg"></a>
         <p class="text--absolute fade">Zasloužíte si to nejlepší.</p>
-        <nav class="nav">
-            <menu class="nav__menu menu">
+        <nav class="nav navbar">
+            <div class="navbar__hamburger">
+                <a class="hamburger-menu" href="javascript:void(0)">
+                    <span class="hamburger-menu__line"></span>
+                    <span class="hamburger-menu__line"></span>
+                    <span class="hamburger-menu__line"></span>
+                </a>
+            </div>
+            <menu class="nav__menu menu navbar__menu hamburger-menu-list navbar__menu--hidden">
                 <div>
                     <li class="menu__item"><a class="menu__link" href="index.html">Domů</a></li>
                     <li class="menu__item"><a class="menu__link" href="inspirujte-se.html">Inspirujte se</a></li>
@@ -78,7 +91,7 @@
         </section>
         <section class="section--full-width">
             <h2 class="heading--hidden">Technologie</h2>
-          <div class="section__dlazdice">
+          <div class="section__dlazdice section__dlazdice--3">
               <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
                   <div class="box--text">
                       <img class="img--dlazdice" src="img/technologies/brouseni.jpg" alt="">
@@ -132,7 +145,7 @@
                     </article>
                     <article class="swiper-slide">
                             <h3 data-aos="fade-zoom-in" data-aos-duration="1000">Lepení</h3>
-                            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" class="aos-init aos-animate space-for-animation">Lepení je technika spojování skleněných částí pomocí speciálních lepidel. Tyto lepidla mohou být transparentní, což umožňuje vytvoření pevného spoje bez viditelných přechodů mezi spojovanými kusy skla.</p>
+                            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" class="aos-init aos-animate space-for-animation">Lepení je technika spojování skleněných částí pomocí speciálních lepidel. Tato lepidla mohou být transparentní, což umožňuje vytvoření pevného spoje bez viditelných přechodů mezi spojovanými kusy skla.</p>
                     </article>
                   </div>
                 </div>
@@ -165,5 +178,6 @@
         <script type="text/javascript">
             AOS.init();
         </script>
+        <script src="hamburger.js"></script>
 </body>
 </html>

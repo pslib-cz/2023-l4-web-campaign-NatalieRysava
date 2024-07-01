@@ -1267,6 +1267,14 @@ li::marker {
             left: calc(240px / 2 + 3rem);
         }
 
+        .header {
+            height: 10rem;
+        }
+
+        .header--pozadi {
+            height: 100vh;
+        }
+
         .heading--vymena {
             content: url(logo.svg);
             width: 240px;
@@ -1340,6 +1348,65 @@ li::marker {
             padding: 3rem;
         } /* dočasní, chci dát carousel */
 
+        figure:has(.box--left-down) {
+            padding-top: 12rem;
+        }
+
+        .box--left-up {
+            top: 0rem;
+        }
+
+        .box--right-up {
+            top: 0rem;
+        }
+
+        .box--right-down {
+            top: 5rem;
+        }
+
+        .box--left-down {
+            top: 5rem;
+        }
+
+        .scroll {
+            display: none;
+        }
+
+        .section--interest__text-box h2 {
+            text-align: center;
+        }
+
+        .section--interest__text-box {
+            gap: 0;
+            flex-direction: column;
+        }
+
+        .article-box {
+            gap: 0;
+            flex-direction: column;
+        }
+
+        .space-for-animation {
+            padding-bottom: 1rem;
+        }
+
+        .section--introduction {
+            height: auto;
+        }
+
+        .section--offer {
+            padding: 3rem;
+        }
+
+        .section--offer article {
+            gap: 0;
+            flex-direction: column-reverse;
+        }
+
+        .article__figure {
+            width: auto;
+        }
+
         .mapa {
             width: 80%;
         }
@@ -1365,6 +1432,52 @@ li::marker {
         .icon-container {
             flex-direction: row;
             justify-content: center;
+        }
+
+        .section--inspiration::after {
+            height: calc((100vw - 9rem) / 2);
+        }
+
+        .section--technologie, .section--benefits {
+            padding-bottom: 3rem;
+            margin-bottom: 0;
+        }
+
+        .section--inspiration {
+            padding-inline: 3rem;
+        }
+
+        .section:has(.video-container) {
+            padding-top: 0;
+        }
+
+        .section--technologie, .section--benefits {
+            padding-bottom: 0rem;
+        }
+
+        .section__dlazdice--3 {
+            grid-gap: 3rem;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+            "item1"
+            "item2"
+            "item3";
+            padding: 3rem;
+        }
+
+        .section--contact img {
+            height: auto;
+            width: 100%;
+        }
+
+        .section--contact figure {
+            height: auto;
+            width: 100%;
+        }
+
+        .section--contact {
+            padding: 3rem;
+            padding-bottom: 0;
         }
     }
 
