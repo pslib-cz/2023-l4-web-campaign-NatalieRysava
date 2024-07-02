@@ -1368,7 +1368,7 @@ li::marker {
             top: 5rem;
         }
 
-        .scroll {
+        .scroll--hidden {
             display: none;
         }
 
@@ -1515,4 +1515,16 @@ li::marker {
         .heading--h1 {
             left: calc(144px / 2 + 3rem);
         }
+    }
+
+
+
+    
+    .sound-icon {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        color: white;
+        padding: 1rem;
+        cursor: pointer;
     }

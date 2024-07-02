@@ -51,10 +51,13 @@
 </head>
 <body class="body--gradients">
     <header class="header header--blue-gradient header--pozadi">
-        <video autoplay muted loop class="video-background">
-            <source src="video-stredni2.webm"
-            type="video/webm">
-        </video>
+            <video id="video" autoplay muted loop class="video-background">
+                <source src="video-stredni2.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <div class="sound-icon" id="sound-icon">
+                <img src="icons/icon_muted.svg" alt="Ikona pro ovládání zvuku">
+            </div>
         <a href="#main" class="scroll"><img src="down--white.svg"></a>
         <nav class="nav navbar">
             <div class="navbar__hamburger">
@@ -73,7 +76,7 @@
                 <div>
                     <li class="menu__item"><a class="menu__link" href="image-book/image-book-cz.pdf" target="_blank">Image Book</a></li>
                     <li class="menu__item"><a class="menu__link" href="kontakty.html">Kontakty</a></li>
-                    <li class="menu__item"><a class="menu__link chosen" href="index.html">CZ</a> / <a class="menu__link" href="index-en.html">EN</a></li>
+                    <li class="menu__item"><a class="menu__link chosen" href="index.html">CZ</a> / <a class="menu__link" href="en.html">EN</a></li>
                 </div>
             </menu>
         </nav>
@@ -239,5 +242,22 @@
         AOS.init();
     </script>
     <script src="hamburger.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.getElementById("video");
+            const soundIcon = document.getElementById("sound-icon");
+            const soundIconImg = soundIcon.querySelector("img");
+
+            soundIcon.addEventListener("click", function() {
+                if (video.muted) {
+                    video.muted = false;
+                    soundIconImg.src = "icons/icon_unmuted.svg";
+                } else {
+                    video.muted = true;
+                    soundIconImg.src = "icons/icon_muted.svg";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
