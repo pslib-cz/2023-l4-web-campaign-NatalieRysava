@@ -983,11 +983,6 @@ li::marker {
         flex-grow: 0;
     }
 
-    .section--o-nas:first-of-type {
-        padding-top: 0;
-    }
-
-
     .rozmer {
         color: var(--prim-gold);
     }
@@ -1349,28 +1344,41 @@ li::marker {
         } /* dočasní, chci dát carousel */
 
         figure:has(.box--left-down) {
-            padding-top: 12rem;
+            padding-top: 21rem;
         }
 
         .box--left-up {
-            top: 0rem;
+            top: 6rem;
+            left: calc(50% - 166.31px / 2);
+            text-align: center;
         }
 
         .box--right-up {
-            top: 0rem;
+            top: 11rem;
+            right: calc(50% - 83.59px / 2);
+            text-align: center;
         }
 
         .box--right-down {
-            top: 5rem;
+            top: 16rem;
+            right: calc(50% - 200px / 2);
+            text-align: center;
         }
 
         .box--left-down {
-            top: 5rem;
+            top: 1rem;
+            left: calc(50% - 83.59px / 2);
+            text-align: center;
         }
 
-        .scroll--hidden {
-            display: none;
+        .section--contact > p {
+            padding-inline: 3rem;
         }
+
+
+        /*.scroll--hidden {
+            display: none;
+        } */
 
         .section--interest__text-box h2 {
             text-align: center;
@@ -1392,6 +1400,10 @@ li::marker {
 
         .section--introduction {
             height: auto;
+        }
+
+        .section--introduction {
+            height: calc(100vh - 16rem);
         }
 
         .section--offer {
@@ -1476,8 +1488,16 @@ li::marker {
         }
 
         .section--contact {
-            padding: 3rem;
             padding-bottom: 0;
+        }
+
+        .section--form .container {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .container > div {
+            width: 100%;
         }
     }
 
