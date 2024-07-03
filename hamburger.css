@@ -15,7 +15,7 @@
     z-index: 1; 
     position: absolute;
     top: 3rem;
-    right: 3rem;  
+    left: 3rem;  
 }
 
 .hamburger-menu {
@@ -59,7 +59,7 @@
     right: 0;
 }
 
-@media screen and (min-width: 661px) {
+@media screen and (min-width: 693px) {
     .navbar__hamburger {
         display: none;
     }
@@ -72,7 +72,13 @@
     }
 }
 
-@media screen and (max-width: 661px)  {
+@media screen and (max-width: 1040px) {
+    .hamburger-menu-list {
+        flex-grow: 0;
+    }
+}
+
+@media screen and (max-width: 693px)  {
     .nav__menu {
         height: 100vh;
     }
@@ -111,7 +117,7 @@
     }
 }
 
-@media screen and (width: 661px) {
+@media screen and (width: 693px) {
     .navbar__menu--hidden {
         transform: translateY(0);
     }

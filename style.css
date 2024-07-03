@@ -33,6 +33,9 @@ html {
     flex-direction: row;
     gap: 2rem;
     justify-content: space-between;
+}
+
+.nav__menu > div {
     padding: 0;
     padding-top: 1rem;
     margin: 0 1.5rem 1rem;
@@ -100,7 +103,7 @@ h2, .heading--h2 {
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
-    top: 1.5rem;
+    top: 2rem;
     margin: 0;
     text-transform: lowercase;
     color: #ffffff;
@@ -462,6 +465,12 @@ figure:has(.box--text) {
 }
 */
 
+.menu--upper {
+    padding-inline: 2.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
 .section--offer article {
     display: flex;
     align-items: start;
@@ -539,7 +548,7 @@ li::marker {
 .scroll {
     position: absolute;
     left: 50%;
-    bottom: 30%;
+    bottom: 30vh;
     opacity: 0;
     transform: translateX(-50%);
     animation: scroll .75s 1s ease-in forwards;
@@ -553,14 +562,14 @@ li::marker {
 
 @keyframes scroll {
     from {
-        bottom: 30%;
+        bottom: 30vh;
         opacity: 0;
     }
     50% {
         opacity: .2;
     }
     to {
-        bottom: 15%;
+        bottom: 15vh;
         opacity: 1;
     }
 }
@@ -1232,6 +1241,16 @@ li::marker {
         flex-direction: column;
     }
 
+    .menu__item--language {
+        padding-top: 1rem;
+        margin: 0 1.5rem 1rem;
+        margin-left: 0;
+    }
+
+    .nav__menu > div:last-child {
+        margin-right: 0;
+    }
+
     .mapa {
         width: 35%;
         position: relative;
@@ -1241,6 +1260,10 @@ li::marker {
     @media only screen and (max-width: 1040px) {
         .heading--h1 {
             top: auto;
+        }
+
+        .menu--upper {
+            justify-content: center;
         }
 
         .nav__menu, .nav__menu div {
@@ -1256,10 +1279,13 @@ li::marker {
         }
     }
 
-    @media only screen and (max-width: 661px) {
+    @media only screen and (max-width: 693px) {
         .heading--h1 {
             top: 3rem;
-            left: calc(240px / 2 + 3rem);
+        }
+
+        .nav__menu {            
+            padding-inline: 2.5rem;
         }
 
         .header {
@@ -1349,6 +1375,19 @@ li::marker {
 
         figure:has(.box--left-down) {
             padding-top: 21rem;
+        }
+
+        .menu--upper {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu__item--language {
+            position: absolute;
+        right: 3rem;
+        top: 3rem;
+        margin: 0;
+        padding: 0;
         }
 
         .section--trophy {
@@ -1531,10 +1570,6 @@ li::marker {
         .heading--vymena {
             width: 160px;
         }
-
-        .heading--h1 {
-            left: calc(160px / 2 + 3rem);
-        }
     }
 
     @media only screen and (max-width: 360px) {
@@ -1548,10 +1583,6 @@ li::marker {
 
         .heading--vymena {
             width: 144px;
-        }
-
-        .heading--h1 {
-            left: calc(144px / 2 + 3rem);
         }
     }
 
