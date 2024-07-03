@@ -72,6 +72,27 @@
     }
 }
 
+@media only screen and (max-width: 540px) {
+    .navbar__hamburger {
+        top: 2.5rem;
+        left: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar__hamburger {
+        top: 2rem;
+        left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .navbar__hamburger {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+}
+
 @media screen and (max-width: 1040px) {
     .hamburger-menu-list {
         flex-grow: 0;

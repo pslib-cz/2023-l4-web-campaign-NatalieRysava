@@ -1373,6 +1373,22 @@ li::marker {
             padding: 3rem;
         } /* dočasní, chci dát carousel */
 
+        .item8 {
+            margin-bottom: 3rem;
+        }
+
+        .section--contact img {
+            margin-right: -.5rem;
+        }
+
+        .section--contact figure {
+            overflow: hidden;
+        }
+
+        .item5 {
+            margin: -3rem;
+        }
+
         figure:has(.box--left-down) {
             padding-top: 21rem;
         }
@@ -1430,6 +1446,15 @@ li::marker {
 
         .section--contact > p {
             padding-inline: 3rem;
+        }
+
+        .sound-icon {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            color: white;
+            padding: 1rem;
+            cursor: pointer;
         }
 
 
@@ -1558,6 +1583,31 @@ li::marker {
         }
     }
 
+    @media only screen and (max-width: 540px) {
+        .heading--h1 {
+            font-size: 2rem;
+        }
+
+        .heading--vymena {
+            width: calc(320px / 3 * 2);
+        }
+
+        .heading--h1 {
+            top: 2.5rem;
+        }
+
+        .menu__item--language {
+            right: 2.5rem;
+            top: 2.5rem;
+        }
+
+        .sound-icon {
+            bottom: 1.5rem;
+            right: 1.5rem;
+        }
+    }
+
+
     @media only screen and (max-width: 480px) {
         .heading--h1 {
             font-size: 1.5rem;
@@ -1570,9 +1620,44 @@ li::marker {
         .heading--vymena {
             width: 160px;
         }
+
+        .heading--h1 {
+            top: 2rem;
+        }
+
+        .menu__item--language {
+            right: 2rem;
+            top: 2rem;
+        }
+
+        .sound-icon {
+            bottom: 1rem;
+            right: 1rem;
+        }
     }
 
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 400px) {
+        .heading--h1 {
+            font-size: 1.5rem;
+        }
+
+        .heading--h1 {
+            top: 1.5rem;
+        }
+
+        .menu__item--language {
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 14px;
+        }
+
+        .sound-icon {
+            bottom: .5rem;
+            right: .5rem;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
         .heading--h1 {
             font-size: 1.35rem;
         }
@@ -1586,14 +1671,16 @@ li::marker {
         }
     }
 
+    @media only screen and (max-width: 359px) {
+        .heading--h1 {
+            font-size: 1.2rem;
+        }
 
+        .section--logo {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    
-    .sound-icon {
-        position: absolute;
-        bottom: 2rem;
-        right: 2rem;
-        color: white;
-        padding: 1rem;
-        cursor: pointer;
+        .heading--vymena {
+            width: 128px;
+        }
     }
