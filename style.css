@@ -1270,6 +1270,10 @@ li::marker {
             height: 100vh;
         }
 
+        .header--short {
+            height: auto;
+        }
+
         .heading--vymena {
             content: url(logo.svg);
             width: 240px;
@@ -1345,6 +1349,11 @@ li::marker {
 
         figure:has(.box--left-down) {
             padding-top: 21rem;
+        }
+
+        .section--trophy {
+            flex-direction: column-reverse;
+            padding-block: 3rem;
         }
 
         .box--left-up {
