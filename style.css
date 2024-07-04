@@ -1293,6 +1293,14 @@ li::marker {
             top: 3rem;
         }
 
+        .menu__item--language {
+            position: absolute;
+            right: 3rem;
+            top: 3rem;
+            margin: 0;
+            padding: 0;
+        }
+
         .nav__menu {            
             padding-inline: 2.5rem;
         }
@@ -1401,14 +1409,6 @@ li::marker {
 
         figure:has(.box--left-down) {
             padding-top: 21rem;
-        }
-
-        .menu__item--language {
-            position: absolute;
-        right: 3rem;
-        top: 3rem;
-        margin: 0;
-        padding: 0;
         }
 
         .section--trophy {
