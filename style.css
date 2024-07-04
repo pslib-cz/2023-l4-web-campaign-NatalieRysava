@@ -655,6 +655,15 @@ li::marker {
     position: relative;
 }
 
+.sound-icon {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+}
+
 
 
 @media screen and (max-width: 1920px){
@@ -1324,6 +1333,7 @@ li::marker {
         }
     }
 
+
     @media only screen and (max-width: 960px) {
         .section__dlazdice {
             grid-template-columns: repeat(2, 1fr);
@@ -1446,15 +1456,6 @@ li::marker {
 
         .section--contact > p {
             padding-inline: 3rem;
-        }
-
-        .sound-icon {
-            position: absolute;
-            bottom: 2rem;
-            right: 2rem;
-            color: white;
-            padding: 1rem;
-            cursor: pointer;
         }
 
 
@@ -1634,6 +1635,22 @@ li::marker {
             bottom: 1rem;
             right: 1rem;
         }
+
+        li:has(.section__path-link--icon-home)::before {
+            content: none;
+        }
+
+        .section__path-link span {
+            left: 0;
+        }
+
+        li:has(.section__path-link--divider-dot) {
+            left: 0;
+        }
+
+        .section__path-box {
+            gap: 1rem;
+        }
     }
 
     @media only screen and (max-width: 400px) {
@@ -1648,7 +1665,7 @@ li::marker {
         .menu__item--language {
             right: 1.5rem;
             top: 1.5rem;
-            font-size: 14px;
+            font-size: .875rem;
         }
 
         .sound-icon {
