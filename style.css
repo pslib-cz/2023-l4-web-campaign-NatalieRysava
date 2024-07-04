@@ -1403,11 +1403,6 @@ li::marker {
             padding-top: 21rem;
         }
 
-        .menu--upper {
-            margin: 0;
-            padding: 0;
-        }
-
         .menu__item--language {
             position: absolute;
         right: 3rem;
