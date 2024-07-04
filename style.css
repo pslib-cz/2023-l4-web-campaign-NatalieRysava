@@ -1619,7 +1619,6 @@ li::marker {
         }
     }
 
-
     @media only screen and (max-width: 480px) {
         .heading--h1 {
             font-size: 1.5rem;
@@ -1670,7 +1669,7 @@ li::marker {
         }
 
         .section__path-link span {
-            margin-left: -.5rem;
+            margin-left: calc(-13.2px / 2);
         }
 
         .section__path-link--icon-home span {
@@ -1679,8 +1678,21 @@ li::marker {
     }
 
     @media only screen and (max-width: 380px) {
+        .section__path-link span {
+            margin-left: calc(-11.2px / 2);
+        }
         .section__path-box {
             font-size: .75rem;
+        }
+    }
+
+    @media only screen and (min-width: 1040px) and (max-width: 1140px) {
+        .heading--h1 {
+            font-size: 2.25rem;
+        }
+
+        .heading--vymena {
+            width: 240px;
         }
     }
 

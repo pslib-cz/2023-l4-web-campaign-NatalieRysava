@@ -109,6 +109,10 @@
         margin: 0;
         padding: 0;
     }
+
+    .menu--upper {
+        margin: 0;
+    }
     
     .navbar__menu--hidden {
         transform: translateY(-120%);
