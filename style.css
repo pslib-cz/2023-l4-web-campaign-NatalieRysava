@@ -1645,25 +1645,26 @@ li::marker {
             bottom: 1rem;
             right: 1rem;
         }
+    }
+
+    @media only screen and (max-width: 525px) {
 
         li:has(.section__path-link--icon-home)::before {
             content: none;
         }
-
+    
         .section__path-link span {
             left: 0;
         }
-
+    
         li:has(.section__path-link--divider-dot) {
             left: 0;
         }
-
+    
         .section__path-box {
             gap: 1rem;
         }
-    }
 
-    @media only screen and (max-width: 412px) {
         .section__path-box {
             gap: .5rem;
         }
@@ -1675,14 +1676,21 @@ li::marker {
         .section__path-link--icon-home span {
             margin-left: 0;
         }
+
     }
 
-    @media only screen and (max-width: 380px) {
+    @media only screen and (max-width: 484px) {
         .section__path-link span {
             margin-left: calc(-11.2px / 2);
         }
         .section__path-box {
             font-size: .75rem;
+        }
+    }
+
+    @media only screen and (max-width: 425px) {
+        .section__path-box {
+            flex-direction: column;
         }
     }
 
