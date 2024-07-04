@@ -1454,6 +1454,22 @@ li::marker {
             text-align: center;
         }
 
+        .section--contact-en .box--left-up {
+            left: calc(50% - 122.96px / 2);
+        }
+
+        .section--contact-en .box--right-up {
+            right: calc(50% - 66.29px / 2);
+        }
+
+        .section--contact-en .box--right-down {
+            right: calc(50% - 200px / 2);
+        }
+
+        .section--contact-en .box--left-down {
+            left: calc(50% - 66.29px / 2);
+        }
+
         .section--contact > p {
             padding-inline: 3rem;
         }

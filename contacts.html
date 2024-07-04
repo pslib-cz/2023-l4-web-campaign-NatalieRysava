@@ -12,6 +12,7 @@
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#173153">
     <link rel="stylesheet" href="form.js">
+    <link rel="stylesheet" href="hamburger.css">
     <meta name="msapplication-TileColor" content="#173153">
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Preciosa Trophies: odborníci na sklářskou výrobu">
@@ -25,24 +26,33 @@
 </head>
 <body class="body--gradients">
     <header class="header">
-        <nav class="nav">
-            <menu class="nav__menu menu">
-              <div>
-                <li class="menu__item"><a class="menu__link" href="en.html">Home</a></li>
-                <li class="menu__item"><a class="menu__link" href="get-inspired.html">Get inspired</a></li>
-                <li class="menu__item"><a class="menu__link" href="about-us.html">About us</a></li>
+      <nav class="nav navbar">
+        <div class="navbar__hamburger">
+            <a class="hamburger-menu" href="javascript:void(0)">
+                <span class="hamburger-menu__line"></span>
+                <span class="hamburger-menu__line"></span>
+                <span class="hamburger-menu__line"></span>
+            </a>
+        </div>
+        <menu class="menu--upper">
+            <div class="nav__menu menu navbar__menu hamburger-menu-list navbar__menu--hidden">
+                <div>
+                    <li class="menu__item"><a class="menu__link" href="en.html">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="get-inspired.html">Get inspired</a></li>
+                    <li class="menu__item"><a class="menu__link" href="about-us.html">About us</a></li>
+                </div>
+                <div>
+                    <li class="menu__item"><a class="menu__link" href="image-book/image-book-en.pdf" target="_blank">Image Book</a></li>
+                    <li class="menu__item"><a class="menu__link chosen" href="contacts.html">Contacts</a></li>
+                </div>
             </div>
-            <div>
-                <li class="menu__item"><a class="menu__link" href="image-book/image-book-en.pdf" target="_blank">Image Book</a></li>
-                <li class="menu__item"><a class="menu__link chosen" href="contacts.html">Contacts</a></li>
-                <li class="menu__item"><a class="menu__link" href="kontakty.html">CZ</a> / <a class="menu__link chosen" href="contacts.html">EN</a></li>
-            </div>
-            </menu>
-        </nav>
+            <li class="menu__item menu__item--language"><a class="menu__link" href="kontakty.html">CZ</a> / <a class="menu__link chosen" href="contacts.html">EN</a></li>
+        </menu>
+    </nav>
         <a href="en.html"><p class="heading--h1"><span class="heading--vymena">Preciosa</span> Trophies</p></a>
     </header>
     <main>
-        <section class="section--contact" id="intro">
+        <section class="section--contact section--contact-en" id="intro">
                 <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="500">Contact us</h1>
                 <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="750">Our team that will prepare the perfect trophy for you...</p>
               <figure>
@@ -200,6 +210,6 @@
             }
           });
         </script>
-        
+        <script src="hamburger.js"></script>
 </body>
 </html>
